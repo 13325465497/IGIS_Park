@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.isoft.igis.edit.dao.UserPointDao">
+
+    <select id="get" resultType="com.isoft.igis.edit.domain.UserPointDO">
+        select `id`,
+               `parkName`,
+               `buildName`,
+               `floorName`,
+               `lon`,
+               `lat`,
+               `iconUrl`,
+               `lable`
+        from t_user_point
+        where id = #{value}
+    </select>
+    <select id="getUserData" resultType="com.isoft.igis.edit.domain.UserPointDO">
+        select `id`,`parkName`,`buildName`,`floorName`,`lon`,`lat`,`iconUrl`,`lable` from t_user_point
+        <where>
+            <if test="id != null and id != ''">and id = #{id}</if>
+            <if test="parkname != null and parkname != ''">and parkName = #{parkname}
+                AND buildName IS NULL AND floorName IS NULL
+            </if>
+            <if test="buildname != null and buildname != ''">and buildName = #{buildname}</if>
+            <if test="floorname != null and floorname != ''">and floorName = #{floorname}</if>
+            <if test="lon != null and lon != ''">and lon = #{lon}</if>
+            <if test="lat != null and lat != ''">and lat = #{lat}</if>
+            <if test="iconurl != null and iconurl != ''">and iconUrl = #{iconurl}</if>
+            <if test="lable != null and lable != ''">and lable = #{lable}</if>
+        </where>
+        <choose>
+            <otherwise>
+                order by id desc
+            </otherwise>
+        </choose>
+        <if test="offset != null and limit != null">
+            limit #{offset}, #{limit}
+        </if>
+    </select>
+    <delete id="deleteByParkName">
+        delete
+        from t_user_point
+        where parkName = #{parkname}
+          and buildName IS NULL
+          AND floorName IS NULL
+    </delete>
+    <delete id="deleteByParkNameAndBuildNameANdFloorName">
+        delete
+        from t_user_point
+        where parkName = #{parkName}
+          AND buildName = #{buildName}
+          AND floorName = #{floorName}
+    </delete>
+
+    <select id="list" resultType="com.isoft.igis.edit.domain.UserPointDO">
+        select `id`,`parkName`,`buildName`,`floorName`,`lon`,`lat`,`iconUrl`,`lable` from t_user_point
+        <where>
+            <if test="id != null and id != ''">and id = #{id}</if>
+            <if test="parkname != null and parkname != ''">and parkName = #{parkname}</if>
+            <if test="buildname != null and buildname != ''">and buildName = #{buildname}</if>
+            <if test="floorname != null and floorname != ''">and floorName = #{floorname}</if>
+            <if test="lon != null and lon != ''">and lon = #{lon}</if>
+            <if test="lat != null and lat != ''">and lat = #{lat}</if>
+            <if test="iconurl != null and iconurl != ''">and iconUrl = #{iconurl}</if>
+            <if test="lable != null and lable != ''">and lable = #{lable}</if>
+        </where>
+        <choose>
+            <otherwise>
+                order by id desc
+            </otherwise>
+        </choose>
+        <if test="offset != null and limit != null">
+            limit #{offset}, #{limit}
+        </if>
+    </select>
+
+    <select id="count" resultType="int">
+        select count(*) from t_user_point
+        <where>
+            <if test="id != null and id != ''">and id = #{id}</if>
+            <if test="parkname != null and parkname != ''">and parkName = #{parkname}</if>
+            <if test="buildname != null and buildname != ''">and buildName = #{buildname}</if>
+            <if test="floorname != null and floorname != ''">and floorName = #{floorname}</if>
+            <if test="lon != null and lon != ''">and lon = #{lon}</if>
+            <if test="lat != null and lat != ''">and lat = #{lat}</if>
+            <if test="iconurl != null and iconurl != ''">and iconUrl = #{iconurl}</if>
+            <if test="lable != null and lable != ''">and lable = #{lable}</if>
+        </where>
+    </select>
+
+    <insert id="save" parameterType="com.isoft.igis.edit.domain.UserPointDO" useGeneratedKeys="true" keyProperty="id">
+        insert into t_user_point
+        (`parkName`,
+         `buildName`,
+         `floorName`,
+         `lon`,
+         `lat`,
+         `iconUrl`,
+         `lable`)
+        values
+        (#{parkname},
+         #{buildname},
+         #{floorname},
+         #{lon},
+         #{lat},
+         #{iconurl},
+         #{lable})
+    </insert>
+
+    <update id="update" parameterType="com.isoft.igis.edit.domain.UserPointDO">
+        update t_user_point
+        <set>
+            <if test="parkname != null">`parkName` = #{parkname},</if>
+            <if test="buildname != null">`buildName` = #{buildname},</if>
+            <if test="floorname != null">`floorName` = #{floorname},</if>
+            <if test="lon != null">`lon` = #{lon},</if>
+            <if test="lat != null">`lat` = #{lat},</if>
+            <if test="iconurl != null">`iconUrl` = #{iconurl},</if>
+            <if test="lable != null">`lable` = #{lable}</if>
+        </set>
+        where id = #{id}
+    </update>
+
+    <delete id="remove">
+        delete
+        from t_user_point
+        where id = #{value}
+    </delete>
+
+    <delete id="batchRemove">
+        delete from t_user_point where id in
+        <foreach item="id" collection="array" open="(" separator="," close=")">
+            #{id}
+        </foreach>
+    </delete>
+
+</mapper>

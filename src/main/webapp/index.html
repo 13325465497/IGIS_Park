@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>IGIS-PARK</title>
+    <link rel="stylesheet" href="css/index.css">
+    <!--<script type="application/javascript" src="js/iGis-min.js"></script>-->
+    <script type="application/javascript" src="js/iGis-debug.js"></script>
+    <script type="application/javascript" src="js/jq/jquery-3.2.1.min.js"></script>
+    <script type="application/javascript" src="js/config.js"></script>
+</head>
+<body>
+<div class="park">
+    <div class="navbar">
+        <div class="parkShow">
+            <div id="parkShow">园区展示</div>
+            <div class="parkListBox">
+                <ul class="parkList"></ul>
+            </div>
+        </div>
+        <div class="facilities" id="facilities">
+            <div id="facilitieManage">设施管理</div>
+            <div class="facilities_type" id="facilities_type">
+                <ul>
+                    <li class="layer"><input type="checkbox" name="gisfacilities" id="security"><label>安保设施</label></li>
+                    <li class="layer"><input type="checkbox" name="gisfacilities" id="firecontrol"><label>消防设施</label>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="tool-all">
+            <div id="tooAll">工具箱</div>
+            <div class="tool-list">
+                <ul>
+                    <li class="measure-distance" id="measureLineFunction">测距</li>
+                    <li class="measure-area" id="measureAreaFunction" onclick="measureAreaFunction()">测面积</li>
+                </ul>
+            </div>
+        </div>
+        <div class="navigation">
+            <div id="navigation">导航规划</div>
+            <div class="navigation-list">
+                <ul>
+                    <li class="drive-plan" id="drivePlan">园区车导</li>
+                    <li class="walk-plan" id="parkWalkPlan">园区步导</li>
+                    <li class="walk-plan" id="floorWalkPlan">室内步导</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="person">
+            <a class="login" href="login">登录</a>
+        </div>
+    </div>
+    <div class="content">
+        <div id="iGis">
+            <div class="walk-navigation">
+                <div id="outdoor-marker" class="outdoor-markerPop">
+                    <div class="outdoor-markerPop-top">
+                        <div class="outdoor-top-title">
+                            <span>操作</span>
+                        </div>
+                        <div class="outdoor-pop-close" id="outdoor-pop-close">&times;</div>
+                    </div>
+                    <div class="outdoor-markerPop-center">
+                        <ul class="outdoor-userEdit">
+                            <li>起始位置</li>
+                            <li>途径位置</li>
+                            <li>结束位置</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="buildGis">
+            <div class="walk-navigation">
+                <div id="floorMarker" class="markerPop">
+                    <div class="markerPop-top">
+                        <div class="top-title">
+                            <span>操作</span>
+                        </div>
+                        <div class="pop-close" id="floor-pop-close">&times;</div>
+                    </div>
+                    <div class="markerPop-center">
+                        <ul class="userEdit">
+                            <li>起始位置</li>
+                            <li>途径位置</li>
+                            <li>结束位置</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="application/javascript" src="js/iGisMap.js"></script>
+<script type="application/javascript" src="js/floor.js"></script>
+<script type="application/javascript" src="js/measure.js"></script>
+<script type="application/javascript" src="js/navigation.js"></script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+html,body{position:fixed;top:0;right:0;bottom:0;left:0;padding:0;margin:0;}
+#iGis2D{width:100%;height:100%;}
+hr{margin: 5px 0 5px -10px;width: calc(100% + 20px);border: 0;border-top: 1px solid #c5c5c5;}
+.igis_button{position:absolute;right:0;min-height:65px;display:flex;justify-content:center;flex-direction:column;background:rgba(255,255,255,0.8);padding:5px 10px;border-radius:0 0 0 4px;z-index:100;}
+.igis_btn{margin:3px 0;border:1px solid #c5c5c5;border-radius:4px;width:85px;height:24px;line-height:22px;background-color:#f9f9f9;outline:none;cursor:pointer;}
+.popup-layer { display: none; position: absolute; left: 0; top: 0; right: 0; bottom: 0; background: rgba(0, 0, 0, .5); z-index: 1010; }
+
+/* 标记详情 */
+.markerPop { position: relative; width: 262px; max-width: 350px; border: 1px solid rgb(153, 153, 153); background-color: rgb(255, 255, 255); z-index: 1000; cursor: auto; }
+.markerPop::before { position: absolute; content: ''; width: 10px; height: 10px; bottom: -7px; left: 47.5%; background-color: #fff; border-left: 1px solid #3e3e3e; border-bottom: 1px solid #464646; transform: rotate(-45deg); }
+.markerPop .markerPop-top { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #dedede; }
+.markerPop .markerPop-top .top-title { line-height: 30px; color: #4d4d4d; padding-left: 11px; font-weight: 700; }
+.markerPop .markerPop-top .pop-close { width: 32px; line-height: 28px; text-align: center; cursor: pointer; color: rgb(204, 204, 204); font-size: 23px; }
+.markerPop .markerPop-top .pop-close:hover { color: rgb(109, 161, 234); }
+.pop-label { width: 65px; }
+.markerPop .markerPop-center { position: relative; overflow-x: auto; overflow-y: hidden; }
+.markerPop .markerPop-center button { margin: 0px 10px 10px 0; float: right; padding: 2px 6px; border: 1px solid #aaa; border-radius: 3px; background: #eee; cursor: pointer; }
+.markerPop .markerPop-center .userEdit { margin: 10px; padding: 0; }
+.markerPop .markerPop-center .userEdit li { display: flex; align-items: center; height:30px; border: 1px solid #ccc; margin-top: -1px; }
+.markerPop .markerPop-center .userEdit li  > span { width: 180px; height: 100%; padding: 4px; color: #666; border-left: 1px solid #ccc; overflow: hidden; }
+.markerPop .markerPop-center .userEdit li  > label { width: 60px; overflow: hidden; }
+
+/* 图标列表弹出层 */
+#markerImg { display: none; position: absolute; transform: translate(-50%, -50%); left: 50%; top: 50%; width: 260px; height: 220px; background: #fff; border: 1px solid #ddd; z-index: 1100; }
+#markerImg img { width: 30px; min-height: 30px; margin: 3px; cursor: pointer; }
+#markerImg .markerImg-top { height: 40px; display: flex; justify-content: space-between; margin-bottom: 10px; align-items: center; border-bottom: 1px solid #dedede; }
+#markerImg .markerImg-top .markerImg-title { line-height: 30px; color: #4d4d4d; padding-left: 11px; font-weight: 700; }
+#markerImg .markerImg-top .markerImg-close { width: 32px; line-height: 28px; text-align: center; cursor: pointer; color: rgb(204, 204, 204); font-size: 23px; }
+#markerImg .markerImg-top .markerImg-close:hover { color: rgb(109, 161, 234); }
+#markerImg .markerImg-center { position: relative; overflow-y: auto; overflow-x: hidden; height: 162px; }
+#markerImg .markerImg-center::-webkit-scrollbar { width: 6px; height: 5px; background-color: #eee; border-radius: 3px; }
+#markerImg .markerImg-center::-webkit-scrollbar-thumb { background: #ccc; border-radius: 3px; }

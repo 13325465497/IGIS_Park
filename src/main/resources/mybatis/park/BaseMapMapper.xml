@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.isoft.igis.park.dao.BaseMapDao">
+
+    <select id="get" resultType="com.isoft.igis.park.domain.BaseMapDO">
+        select `id`,`baseMapUrl`
+        from t_base_map
+        where id = #{value}
+    </select>
+
+    <insert id="save" parameterType="com.isoft.igis.park.domain.BaseMapDO" useGeneratedKeys="true" keyProperty="id">
+        insert into t_base_map
+        (
+            `baseMapUrl`
+        )
+        values
+        (
+            #{basemapurl}
+        )
+    </insert>
+
+    <update id="update" parameterType="com.isoft.igis.park.domain.BaseMapDO">
+        update t_base_map
+        <set>
+            <if test="basemapurl != null">`baseMapUrl` = #{basemapurl}</if>
+        </set>
+        where id = #{id}
+    </update>
+
+    <delete id="remove">
+        delete
+        from t_base_map
+        where id = #{value}
+    </delete>
+
+</mapper>

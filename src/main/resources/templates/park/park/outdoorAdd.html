@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<head th:include="include :: header"></head>
+<body class="gray-bg">
+<div class="wrapper wrapper-ccc ">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="ibox float-e-margins">
+                <div class="ibox-content">
+                    <form class="form-horizontal m-t" id="outdoorAdd" enctype="multipart/form-data" method="post">
+                        <input name="parkid" th:value="${parkid}"
+                               type="hidden">
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label"><span
+                                    style="color:#dc143c;    font-size: 20px;    padding-right: 10px;    display: block;    float: left;width: 50px;">*</span>园区底图数据：</label>
+                            <div class="col-sm-6">
+                                <input id="wmsData" name="files" type="file" style="display:none">
+                                <input type="button" class="form-control"
+                                       style="height:30px;border-radius:4px;border:1px solid #ccc;padding:0px 10px;color:#333;background-color:#e7eaec;float:left;width:30%;"
+                                       value="选择文件" onclick="wmsData.click()">&nbsp;&nbsp;<span
+                                    style="line-height:30px;padding-left:15px;" id="wmsData_a">请上传Zip格式数据</span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">园区内部轮廓数据：</label>
+                            <div class="col-sm-6">
+                                <input id="reghionData" name="files" type="file" style="display:none">
+                                <input type="button" class="form-control"
+                                       style="height:30px;border-radius:4px;border:1px solid #ccc;padding:0px 10px;color:#333;background-color:#e7eaec;float:left;width:30%;"
+                                       value="选择文件" onclick="reghionData.click()">&nbsp;&nbsp;<span
+                                    style="line-height:30px;padding-left:15px;" id="reghionData_a">请上传Zip格式数据</span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">园区poi点数据：</label>
+                            <div class="col-sm-6">
+                                <input id="poiData" name="files" type="file" style="display:none">
+                                <input type="button" class="form-control"
+                                       style="height:30px;border-radius:4px;border:1px solid #ccc;padding:0px 10px;color:#333;background-color:#e7eaec;float:left;width:30%;"
+                                       value="选择文件" onclick="poiData.click()">&nbsp;&nbsp;<span
+                                    style="line-height:30px;padding-left:15px;" id="poiData_a">请上传Zip格式数据</span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">园区步导数据：</label>
+                            <div class="col-sm-6">
+                                <input id="walkData" name="files" type="file" style="display:none">
+                                <input type="button" class="form-control"
+                                       style="height:30px;border-radius:4px;border:1px solid #ccc;padding:0px 10px;color:#333;background-color:#e7eaec;float:left;width:30%;"
+                                       value="选择文件" onclick="walkData.click()">&nbsp;&nbsp;<span
+                                    style="line-height:30px;padding-left:15px;" id="walkData_a">请上传Zip格式数据</span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">园区车导数据：</label>
+                            <div class="col-sm-6">
+                                <input id="dirveData" name="files" type="file" style="display:none">
+                                <input type="button" class="form-control"
+                                       style="height:30px;border-radius:4px;border:1px solid #ccc;padding:0px 10px;color:#333;background-color:#e7eaec;float:left;width:30%;"
+                                       value="选择文件" onclick="dirveData.click()">&nbsp;&nbsp;<span
+                                    style="line-height:30px;padding-left:15px;" id="dirveData_a">请上传Zip格式数据</span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-8 col-sm-offset-3">
+                                <button type="button" onclick="addDataSubmit()" class="btn btn-primary">提交</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div th:include="include::footer"></div>
+<script th:inline="javascript"> var ctx = [[@{
+    /}]] ; </script>
+<script type="text/javascript" data-th-src="@{/js/appjs/park/park/outdoorAdd.js}"></script>
+</body>
+</html>

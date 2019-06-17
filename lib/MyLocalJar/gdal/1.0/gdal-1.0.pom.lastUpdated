@@ -1,0 +1,19 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Fri Jun 14 09:31:42 CST 2019
+http\://repo.boundlessgeo.com/main/.lastUpdated=1539849725538
+@default-spring-snapshots-http\://repo.spring.io/libs-snapshot-local/.lastUpdated=1555902988678
+http\://repo.spring.io/libs-release-local/.error=
+http\://repo.boundlessgeo.com/main/.error=
+http\://download.java.net/maven/2/.lastUpdated=1540172366098
+http\://47.92.33.33\:8081/nexus/content/groups/public/.lastUpdated=1555902280963
+http\://repo.spring.io/libs-snapshot-local/.error=Could not transfer artifact MyLocalJar\:gdal\:pom\:1.0 from/to spring-snapshots (http\://repo.spring.io/libs-snapshot-local)\: Failed to transfer file\: http\://repo.spring.io/libs-snapshot-local/MyLocalJar/gdal/1.0/gdal-1.0.pom. Return code is\: 409, ReasonPhrase\: Conflict.
+http\://maven.aliyun.com/nexus/content/groups/public/.lastUpdated=1560475902598
+http\://download.osgeo.org/webdav/geotools/.error=
+http\://maven.aliyun.com/nexus/content/groups/public/.error=
+https\://repo.maven.apache.org/maven2/.lastUpdated=1541662783583
+https\://repo.maven.apache.org/maven2/.error=
+http\://download.osgeo.org/webdav/geotools/.lastUpdated=1560475900828
+http\://repo.spring.io/libs-milestone-local/.error=
+http\://repo.spring.io/libs-milestone-local/.lastUpdated=1555902281967
+http\://repo.spring.io/libs-release-local/.lastUpdated=1555902282360
+http\://47.92.33.33\:8081/nexus/content/groups/public/.error=

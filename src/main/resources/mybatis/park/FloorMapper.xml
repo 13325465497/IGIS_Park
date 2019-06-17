@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.isoft.igis.park.dao.FloorDao">
+
+    <select id="get" resultType="com.isoft.igis.park.domain.FloorDO">
+        select `floorId`,`floorDir`,`floorName`,`floorLable`,`floorFileName`,`floorNum`,`floorArea`,`floorDescription`,`buildId`
+        from t_floor
+        where floorId = #{value}
+    </select>
+
+    <select id="list" resultType="com.isoft.igis.park.domain.FloorDO">
+        select `floorId`,`floorDir`,`floorName`,`floorLable`,`floorFileName`,`floorNum`,`floorArea`,`floorDescription`,`buildId` from t_floor
+        <where>
+            <if test="floorid != null and floorid != ''">and floorId = #{floorid}</if>
+            <if test="floordir != null and floordir != ''">and floorDir = #{floordir}</if>
+            <if test="floorname != null and floorname != ''">and floorName = #{floorname}</if>
+            <if test="floorlable != null and floorlable != ''">and floorLable = #{floorlable}</if>
+            <if test="floorfilename != null and floorfilename != ''">and floorFileName = #{floorfilename}</if>
+            <if test="floornum != null and floornum != ''">and floorNum = #{floornum}</if>
+            <if test="floorarea != null and floorarea != ''">and floorArea = #{floorarea}</if>
+            <if test="floordescription != null and floordescription != ''">and floorDescription = #{floordescription}
+            </if>
+            <if test="buildid != null and buildid != ''">and buildId = #{buildid}</if>
+        </where>
+        <choose>
+            <when test="sort != null and sort.trim() != ''">
+                order by ${sort} ${order}
+            </when>
+            <otherwise>
+                order by floorId desc
+            </otherwise>
+        </choose>
+        <if test="offset != null and limit != null">
+            limit #{offset}, #{limit}
+        </if>
+    </select>
+
+    <select id="count" resultType="int">
+        select count(*) from t_floor
+        <where>
+            <if test="floorid != null and floorid != ''">and floorId = #{floorid}</if>
+            <if test="floordir != null and floordir != ''">and floorDir = #{floordir}</if>
+            <if test="floorname != null and floorname != ''">and floorName = #{floorname}</if>
+            <if test="floorlable != null and floorlable != ''">and floorLable = #{floorlable}</if>
+            <if test="floornum != null and floornum != ''">and floorNum = #{floornum}</if>
+            <if test="floorarea != null and floorarea != ''">and floorArea = #{floorarea}</if>
+            <if test="floordescription != null and floordescription != ''">and floorDescription = #{floordescription}
+            </if>
+            <if test="buildid != null and buildid != ''">and buildId = #{buildid}</if>
+        </where>
+    </select>
+
+    <insert id="save" parameterType="com.isoft.igis.park.domain.FloorDO" useGeneratedKeys="true" keyProperty="floorid">
+        insert into t_floor
+        (`floorId`,
+         `floorDir`,
+         `floorName`,
+         `floorLable`,
+         `floorFileName`,
+         `floorNum`,
+         `floorArea`,
+         `floorDescription`,
+         `buildId`,
+         `floorDataStatus`,
+         `NavigationDataStatus`)
+        values
+        (#{floorid},
+         #{floordir},
+         #{floorname},
+         #{floorlable},
+         #{floorfilename},
+         #{floornum},
+         #{floorarea},
+         #{floordescription},
+         #{buildid},
+         #{floorDataStatus},
+         #{NavigationDataStatus})
+    </insert>
+
+    <update id="update" parameterType="com.isoft.igis.park.domain.FloorDO">
+        update t_floor
+        <set>
+            <if test="floordir != null">`floorDir` = #{floordir},</if>
+            <if test="floorname != null">`floorName` = #{floorname},</if>
+            <if test="floorlable != null">`floorLable` = #{floorlable},</if>
+            <if test="floorfilename != null">`floorFileName` = #{floorfilename},</if>
+            <if test="floornum != null">`floorNum` = #{floornum},</if>
+            <if test="floorarea != null">`floorArea` = #{floorarea},</if>
+            <if test="floordescription != null">`floorDescription` = #{floordescription},</if>
+            <if test="buildid != null">`buildId` = #{buildid}</if>
+        </set>
+        where floorId = #{floorid}
+    </update>
+
+    <delete id="remove">
+        delete
+        from t_floor
+        where floorId = #{value}
+    </delete>
+
+    <delete id="batchRemove">
+        delete from t_floor where floorId in
+        <foreach item="floorid" collection="array" open="(" separator="," close=")">
+            #{floorid}
+        </foreach>
+    </delete>
+    <update id="setFloorDataStatus" parameterType="Map">
+        update t_floor
+        set floorDataStatus=#{floorDataStatus},
+            NavigationDataStatus=#{NavigationDataStatus}
+        where floorId = #{floorid}
+    </update>
+    <select id="getFileName" parameterType="Long" resultType="String">
+        select floorFileName from t_floor where floorId=#{floorid}
+    </select>
+    <select id="findFloorLableByFloorFileName" parameterType="Map" resultType="String">
+        select floorLable from t_floor where floorFileName=#{floorFileName} and buildId=#{buildId}
+    </select>
+</mapper>

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.isoft.igis.park.dao.BuildingDao">
+
+    <select id="get" resultType="com.isoft.igis.park.domain.BuildingDO">
+        select `buildId`,`buildDir`,`buildName`,`buildLable`,`buildFileName`,`floorCount`,`buildArea`,`buildDescription`,`parkId`
+        from t_building
+        where buildId = #{value}
+    </select>
+
+    <select id="list" resultType="com.isoft.igis.park.domain.BuildingDO">
+        select `buildId`,`buildDir`,`buildName`,`buildLable`,`buildFileName`,`floorCount`,`buildArea`,`buildDescription`,`parkId` from t_building
+        <where>
+            <if test="buildid != null and buildid != ''">and buildId = #{buildid}</if>
+            <if test="builddir != null and builddir != ''">and buildDir = #{builddir}</if>
+            <if test="buildname != null and buildname != ''">and buildName = #{buildname}</if>
+            <if test="buildlable != null and buildlable != ''">and buildLable = #{buildlable}</if>
+            <if test="buildfilename != null and buildfilename != ''">and buildFileName = #{buildfilename}</if>
+            <if test="floorcount != null and floorcount != ''">and floorCount = #{floorcount}</if>
+            <if test="buildarea != null and buildarea != ''">and buildArea = #{buildarea}</if>
+            <if test="builddescription != null and builddescription != ''">and buildDescription = #{builddescription}
+            </if>
+            <if test="parkid != null and parkid != ''">and parkId = #{parkid}</if>
+        </where>
+        <choose>
+            <when test="sort != null and sort.trim() != ''">
+                order by ${sort} ${order}
+            </when>
+            <otherwise>
+                order by buildId desc
+            </otherwise>
+        </choose>
+        <if test="offset != null and limit != null">
+            limit #{offset}, #{limit}
+        </if>
+    </select>
+
+    <select id="count" resultType="int">
+        select count(*) from t_building
+        <where>
+            <if test="buildid != null and buildid != ''">and buildId = #{buildid}</if>
+            <if test="builddir != null and builddir != ''">and buildDir = #{builddir}</if>
+            <if test="buildname != null and buildname != ''">and buildName = #{buildname}</if>
+            <if test="buildlable != null and buildlable != ''">and buildLable = #{buildlable}</if>
+            <if test="floorcount != null and floorcount != ''">and floorCount = #{floorcount}</if>
+            <if test="buildarea != null and buildarea != ''">and buildArea = #{buildarea}</if>
+            <if test="builddescription != null and builddescription != ''">and buildDescription = #{builddescription}
+            </if>
+            <if test="parkid != null and parkid != ''">and parkId = #{parkid}</if>
+        </where>
+    </select>
+
+    <insert id="save" parameterType="com.isoft.igis.park.domain.BuildingDO" useGeneratedKeys="true"
+            keyProperty="buildid">
+        insert into t_building
+        (`buildId`,
+         `buildDir`,
+         `buildName`,
+         `buildLable`,
+         `buildFileName`,
+         `floorCount`,
+         `buildArea`,
+         `buildDescription`,
+         `parkId`)
+        values
+        (#{buildid},
+         #{builddir},
+         #{buildname},
+         #{buildlable},
+         #{buildfilename},
+         #{floorcount},
+         #{buildarea},
+         #{builddescription},
+         #{parkid})
+    </insert>
+
+    <update id="update" parameterType="com.isoft.igis.park.domain.BuildingDO">
+        update t_building
+        <set>
+            <if test="builddir != null">`buildDir` = #{builddir},</if>
+            <if test="buildname != null">`buildName` = #{buildname},</if>
+            <if test="buildlable != null">`buildLable` = #{buildlable},</if>
+            <if test="buildfilename != null">`buildFileName` = #{buildfilename},</if>
+            <if test="floorcount != null">`floorCount` = #{floorcount},</if>
+            <if test="buildarea != null">`buildArea` = #{buildarea},</if>
+            <if test="builddescription != null">`buildDescription` = #{builddescription},</if>
+            <if test="parkid != null">`parkId` = #{parkid}</if>
+        </set>
+        where buildId = #{buildid}
+    </update>
+
+    <delete id="remove">
+        delete
+        from t_building
+        where buildId = #{value}
+    </delete>
+
+    <delete id="batchRemove">
+        delete from t_building where buildId in
+        <foreach item="buildid" collection="array" open="(" separator="," close=")">
+            #{buildid}
+        </foreach>
+    </delete>
+    <select id="getFileName" parameterType="Long" resultType="String">
+        select buildFileName from t_building where buildId=#{buildid}
+    </select>
+    <select id="findBuildLableByBuildFileName" parameterType="Map" resultType="String">
+        select buildLable from t_building where buildFileName=#{buildFileName} and parkId=#{parkId}
+    </select>
+    <select id="findBuildIdByBuildFIleName" parameterType="Map" resultType="Long">
+        select buildId from t_building where buildFileName=#{buildFileName} and parkId=#{parkId}
+    </select>
+</mapper>

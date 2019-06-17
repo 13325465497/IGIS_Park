@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<head th:include="include :: header"></head>
+<body class="gray-bg">
+<div class="wrapper wrapper-ccc ">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="ibox float-e-margins">
+                <div class="ibox-content">
+                    <form class="form-horizontal m-t" id="pointDataAdd" enctype="multipart/form-data" method="post">
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">业务数据(点)：</label>
+                            <div class="col-sm-6">
+                                <input id="pointData" name="file" type="file" style="display:none">
+                                <input type="button" class="form-control"
+                                       value="选择文件" onclick="pointData.click()">&nbsp;&nbsp;<span
+                                    style="line-height:30px;padding-left:15px;" id="pointData_a">请上传Excel/csv格式数据</span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-8 col-sm-offset-3">
+                                <button type="button" onclick="addDataSubmit()" class="btn btn-primary">提交</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div th:include="include::footer"></div>
+<script th:inline="javascript"> var ctx = [[@{
+    /}]] ; </script>
+<script type="text/javascript" data-th-src="@{/js/appjs/park/park/parkPointAdd.js}"></script>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<head th:include="include :: header"></head>
+<body class="gray-bg">
+<div class="wrapper wrapper-ccc ">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="ibox float-e-margins">
+                <div class="ibox-content">
+                    <form class="form-horizontal m-t" id="indoorAdd" enctype="multipart/form-data" method="post">
+                        <input name="floorid" th:value="${floorid}"
+                               type="hidden">
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">
+                                <span
+                                        style="color:#dc143c;    font-size: 20px;    padding-right: 10px;    display: block;    float: left;width: 50px;">*</span>楼层点：</label>
+                            <div class="col-sm-6">
+                                <input id="poiData" name="files" type="file" style="display:none">
+                                <input type="button" class="form-control"
+                                       style="height:30px;border-radius:4px;border:1px solid #ccc;padding:0px 10px;color:#333;background-color:#e7eaec;float:left;width:30%;"
+                                       value="选择文件" onclick="poiData.click()">&nbsp;&nbsp;<span
+                                    style="line-height:30px;padding-left:15px;" id="poiData_a">请上传Zip格式数据</span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label"><span
+                                    style="color:#dc143c;    font-size: 20px;    padding-right: 10px;    display: block;    float: left;width: 50px;">*</span>楼层区域块：</label>
+                            <div class="col-sm-6">
+                                <input id="regionData" name="files" type="file" style="display:none">
+                                <input type="button" class="form-control"
+                                       style="height:30px;border-radius:4px;border:1px solid #ccc;padding:0px 10px;color:#333;background-color:#e7eaec;float:left;width:30%;"
+                                       value="选择文件" onclick="regionData.click()">&nbsp;&nbsp;<span
+                                    style="line-height:30px;padding-left:15px;" id="regionData_a">请上传Zip格式数据</span>
+                            </div>
+
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label"><span
+                                    style="color:#dc143c;    font-size: 20px;    padding-right: 10px;    display: block;    float: left;width: 50px;">*</span>楼层子区域块：</label>
+                            <div class="col-sm-6">
+                                <input id="subRegionData" name="files" type="file" style="display:none">
+                                <input type="button" class="form-control"
+                                       style="height:30px;border-radius:4px;border:1px solid #ccc;padding:0px 10px;color:#333;background-color:#e7eaec;float:left;width:30%;"
+                                       value="选择文件" onclick="subRegionData.click()">&nbsp;&nbsp;<span
+                                    style="line-height:30px;padding-left:15px;" id="subRegionData_a">请上传Zip格式数据</span>
+                            </div>
+
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label"><span
+                                    style="color:#dc143c;    font-size: 20px;    padding-right: 10px;    display: block;    float: left;width: 50px;">*</span>楼层轮廓：</label>
+                            <div class="col-sm-6">
+                                <input id="floorData" name="files" type="file" style="display:none">
+                                <input type="button" class="form-control"
+                                       style="height:30px;border-radius:4px;border:1px solid #ccc;padding:0px 10px;color:#333;background-color:#e7eaec;float:left;width:30%;"
+                                       value="选择文件" onclick="floorData.click()">&nbsp;&nbsp;<span
+                                    style="line-height:30px;padding-left:15px;" id="floorData_a">请上传Zip格式数据</span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">楼层道路：</label>
+                            <div class="col-sm-6">
+                                <input id="linkData" name="files" type="file" style="display:none">
+                                <input type="button" class="form-control"
+                                       style="height:30px;border-radius:4px;border:1px solid #ccc;padding:0px 10px;color:#333;background-color:#e7eaec;float:left;width:30%;"
+                                       value="选择文件" onclick="linkData.click()">&nbsp;&nbsp;<span
+                                    style="line-height:30px;padding-left:15px;" id="linkData_a">请上传Zip格式数据</span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-8 col-sm-offset-3">
+                                <button type="button" onclick="addDataSubmit()" class="btn btn-primary">提交</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div th:include="include::footer"></div>
+<script th:inline="javascript"> var ctx = [[@{
+    /}]] ; </script>
+<script type="text/javascript" data-th-src="@{/js/appjs/park/floor/indoorAdd.js}"></script>
+</body>
+</html>

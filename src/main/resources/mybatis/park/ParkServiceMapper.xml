@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.isoft.igis.park.dao.ParkServiceDao">
+
+    <select id="get" resultType="com.isoft.igis.park.domain.ParkServiceDO">
+        select `id`,
+               `parkName`,
+               `parkUserName`,
+               `indoorService`,
+               `outdoorWmsService`,
+               `outdoorWfsService`,
+               `lon`,
+               `lat`
+        from t_park_service
+        where id = #{id}
+    </select>
+
+    <select id="list" resultType="com.isoft.igis.park.domain.ParkServiceDO">
+        select `id`,`parkName`,`parkUserName`,`indoorService`,`outdoorWmsService`,`outdoorWfsService`,`lon`,`lat` from
+        t_park_service
+        <where>
+            <if test="id != null and id != ''">and id = #{id}</if>
+            <if test="parkname != null and parkname != ''">and parkName = #{parkname}</if>
+            <if test="parkusername != null and parkusername != ''">and parkUserName = #{parkusername}</if>
+            <if test="indoorservice != null and indoorservice != ''">and indoorService = #{indoorservice}</if>
+            <if test="outdoorwmsservice != null and outdoorwmsservice != ''">and outdoorWmsService =
+                #{outdoorwmsservice}
+            </if>
+            <if test="outdoorwfsservice != null and outdoorwfsservice != ''">and outdoorWfsService =
+                #{outdoorwfsservice}
+            </if>
+            <if test="lon != null and lon != ''">and lon = #{lon}</if>
+            <if test="lat != null and lat != ''">and lat = #{lat}</if>
+        </where>
+        <choose>
+            <when test="sort != null and sort.trim() != ''">
+                order by ${sort} ${order}
+            </when>
+            <otherwise>
+                order by id desc
+            </otherwise>
+        </choose>
+        <if test="offset != null and limit != null">
+            limit #{offset}, #{limit}
+        </if>
+    </select>
+
+    <select id="count" resultType="int">
+        select count(*) from t_park_service
+        <where>
+            <if test="id != null and id != ''">and id = #{id}</if>
+            <if test="parkname != null and parkname != ''">and parkName = #{parkname}</if>
+            <if test="parkusername != null and parkusername != ''">and parkUserName = #{parkusername}</if>
+            <if test="indoorservice != null and indoorservice != ''">and indoorService = #{indoorservice}</if>
+            <if test="outdoorwmsservice != null and outdoorwmsservice != ''">and outdoorWmsService =
+                #{outdoorwmsservice}
+            </if>
+            <if test="outdoorwfsservice != null and outdoorwfsservice != ''">and outdoorWfsService =
+                #{outdoorwfsservice}
+            </if>
+            <if test="lon != null and lon != ''">and lon = #{lon}</if>
+            <if test="lat != null and lat != ''">and lat = #{lat}</if>
+        </where>
+    </select>
+
+    <insert id="save" parameterType="com.isoft.igis.park.domain.ParkServiceDO" useGeneratedKeys="true" keyProperty="id">
+        insert into t_park_service
+        (`parkName`,
+         `parkUserName`,
+         `indoorService`,
+         `outdoorWmsService`,
+         `outdoorWfsService`,
+         `lon`,
+         `lat`)
+        values
+        (#{parkname},
+         #{parkusername},
+         #{indoorservice},
+         #{outdoorwmsservice},
+         #{outdoorwfsservice},
+         #{lon},
+         #{lat})
+    </insert>
+
+    <update id="update" parameterType="com.isoft.igis.park.domain.ParkServiceDO">
+        update t_park_service
+          set
+            indoorService = #{indoorservice},
+            outdoorWmsService = #{outdoorwmsservice},
+            outdoorWfsService = #{outdoorwfsservice},
+            lon = #{lon},
+            lat = #{lat}
+        where parkName = #{parkname}
+    </update>
+
+    <delete id="remove" parameterType="String">
+        delete
+        from t_park_service
+        where parkName = #{parkname}
+    </delete>
+
+    <delete id="batchRemove">
+        delete from t_park_service where id in
+        <foreach item="id" collection="array" open="(" separator="," close=")">
+            #{id}
+        </foreach>
+    </delete>
+
+</mapper>

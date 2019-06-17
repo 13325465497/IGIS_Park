@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<head th:include="include :: header"></head>
+<body class="gray-bg">
+<div class="wrapper wrapper-content ">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="ibox float-e-margins">
+                <div class="ibox-content">
+                    <form class="form-horizontal m-t" id="signupForm">
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">楼层名称：</label>
+                            <div class="col-sm-8">
+                                <input id="floorname" name="floorname" class="form-control"
+                                       type="text">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">出入口楼层： </label>
+                                <input type="radio" onclick="iSGroundFloor(1)" name="GroundFloor" style="margin-left: 15px;"> 是
+                                <input type="radio" onclick="iSGroundFloor(2)" checked="checked" name="GroundFloor"> 否
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">楼层标签：</label>
+                            <div class="col-sm-8">
+                                <input id="floorlable" name="floorlable" class="form-control"
+                                       type="text">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">楼层编号：</label>
+                            <div class="col-sm-8">
+                                <input id="floornum" name="floornum" class="form-control"
+                                       type="text">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">楼层面积(㎡)：</label>
+                            <div class="col-sm-8">
+                                <input id="floorarea" name="floorarea" class="form-control"
+                                       type="text">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">楼层描述：</label>
+                            <div class="col-sm-8">
+                                <input id="floordescription" name="floordescription"
+                                       class="form-control" type="text">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">园区：</label>
+                            <div class="col-sm-8">
+                                <select class="form-control  selectpicker" id="parkid" name="parkid">
+                                    <option th:value="${parkId}"
+                                            th:text="${parkName}"></option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">楼栋：</label>
+                            <div class="col-sm-8">
+                                <select class="form-control selectpicker" id="buildid" name="buildid">
+                                    <option th:value="${buildId}"
+                                            th:text="${buildName}"></option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-8 col-sm-offset-3">
+                                <button type="submit" class="btn btn-primary">提交</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div th:include="include::footer"></div>
+<script th:inline="javascript"> var ctx = [[@{
+    /}]] ; </script>
+<script type="text/javascript" data-th-src="@{/js/appjs/park/floor/add.js}"></script>
+</body>
+</html>

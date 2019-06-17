@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.isoft.igis.park.dao.ParkDao">
+
+    <select id="get" resultType="com.isoft.igis.park.domain.ParkDO">
+        select `parkId`,
+               `parkDir`,
+               `parkName`,
+               `parkLable`,
+               `parkFileName`,
+               `province`,
+               `city`,
+               `region`,
+               `parkAddress`,
+               `parkArea`,
+               `parkDescription`,
+               `parkImages`,
+               `buildCount`,
+               `dept_id`,
+               `parkDataStatus`
+        from t_park
+        where parkId = #{value}
+    </select>
+
+    <select id="list" resultType="com.isoft.igis.park.domain.ParkDO">
+        select `parkId`,`parkDir`,`parkName`,`parkLable`,`parkFileName`,`province`,`city`,`region`,`parkAddress`,`parkArea`
+        ,`parkDescription`,`parkImages`,`buildCount`,`dept_id` from t_park
+        <where>
+            <if test="parkid != null and parkid != ''">and parkId = #{parkid}</if>
+            <if test="parkdir != null and parkdir != ''">and parkDir = #{parkdir}</if>
+            <if test="parkname != null and parkname != ''">and parkName = #{parkname}</if>
+            <if test="parklable != null and parklable != ''">and parkLable = #{parklable}</if>
+            <if test="parkfilename != null and parkfilename != ''">and parkFileName = #{parkfilename}</if>
+            <if test="province != null and province != ''">and province = #{province}</if>
+            <if test="city != null and city != ''">and city = #{city}</if>
+            <if test="region != null and region != ''">and region = #{region}</if>
+            <if test="parkaddress != null and parkaddress != ''">and parkAddress = #{parkaddress}</if>
+            <if test="parkarea != null and parkarea != ''">and parkArea = #{parkarea}</if>
+            <if test="parkdescription != null and parkdescription != ''">and parkDescription = #{parkdescription}</if>
+            <if test="parkimages != null and parkimages != ''">and parkImages = #{parkimages}</if>
+            <if test="buildcount != null and buildcount != ''">and buildCount = #{buildcount}</if>
+            <if test="deptId != null and deptId != ''">and dept_id = #{deptId}</if>
+        </where>
+        <choose>
+            <when test="sort != null and sort.trim() != ''">
+                order by ${sort} ${order}
+            </when>
+            <otherwise>
+                order by parkId desc
+            </otherwise>
+        </choose>
+        <if test="offset != null and limit != null">
+            limit #{offset}, #{limit}
+        </if>
+    </select>
+
+    <select id="count" resultType="int">
+        select count(*) from t_park
+        <where>
+            <if test="parkid != null and parkid != ''">and parkId = #{parkid}</if>
+            <if test="parkdir != null and parkdir != ''">and parkDir = #{parkdir}</if>
+            <if test="parkname != null and parkname != ''">and parkName like #{parkname}</if>
+            <if test="parklable != null and parklable != ''">and parkLable like #{parklable}</if>
+            <if test="province != null and province != ''">and province = #{province}</if>
+            <if test="city != null and city != ''">and city = #{city}</if>
+            <if test="region != null and region != ''">and region = #{region}</if>
+            <if test="parkaddress != null and parkaddress != ''">and parkAddress = #{parkaddress}</if>
+            <if test="parkarea != null and parkarea != ''">and parkArea = #{parkarea}</if>
+            <if test="parkdescription != null and parkdescription != ''">and parkDescription = #{parkdescription}</if>
+            <if test="parkimages != null and parkimages != ''">and parkImages = #{parkimages}</if>
+            <if test="buildcount != null and buildcount != ''">and buildCount = #{buildcount}</if>
+            <if test="deptId != null and deptId != ''">and dept_id = #{deptId}</if>
+        </where>
+    </select>
+
+    <insert id="save" parameterType="com.isoft.igis.park.domain.ParkDO" useGeneratedKeys="true" keyProperty="parkid">
+        insert into t_park
+        (`parkId`,
+         `parkDir`,
+         `parkName`,
+         `parkLable`,
+         `parkFileName`,
+         `province`,
+         `city`,
+         `region`,
+         `parkAddress`,
+         `parkArea`,
+         `parkDescription`,
+         `parkImages`,
+         `buildCount`,
+         `dept_id`,
+         `parkDataStatus`)
+        values
+        (#{parkid},
+         #{parkdir},
+         #{parkname},
+         #{parklable},
+         #{parkfilename},
+         #{province},
+         #{city},
+         #{region},
+         #{parkaddress},
+         #{parkarea},
+         #{parkdescription},
+         #{parkimages},
+         #{buildcount},
+         #{deptId},
+         #{parkDataStatus})
+    </insert>
+
+    <update id="update" parameterType="com.isoft.igis.park.domain.ParkDO">
+        update t_park
+        <set>
+            <if test="parkdir != null">`parkDir` = #{parkdir},</if>
+            <if test="parkname != null">`parkName` = #{parkname},</if>
+            <if test="parklable != null">`parkLable` = #{parklable},</if>
+            <if test="parkfilename != null">`parkFileName` = #{parkfilename},</if>
+            <if test="province != null">`province` = #{province},</if>
+            <if test="city != null">`city` = #{city},</if>
+            <if test="region != null">`region` = #{region},</if>
+            <if test="parkaddress != null">`parkAddress` = #{parkaddress},</if>
+            <if test="parkarea != null">`parkArea` = #{parkarea},</if>
+            <if test="parkdescription != null">`parkDescription` = #{parkdescription},</if>
+            <if test="parkimages != null">`parkImages` = #{parkimages},</if>
+            <if test="buildcount != null">`buildCount` = #{buildcount},</if>
+            <if test="deptId != null">`dept_id` = #{deptId}</if>
+        </set>
+        where parkId = #{parkid}
+    </update>
+
+    <delete id="remove">
+        delete
+        from t_park
+        where parkId = #{value}
+    </delete>
+
+    <delete id="batchRemove">
+        delete from t_park where parkId in
+        <foreach item="parkid" collection="array" open="(" separator="," close=")">
+            #{parkid}
+        </foreach>
+    </delete>
+    <resultMap id="ParkMapInfo" type="com.isoft.igis.park.domain.ParkMapInfo">
+        <id column="parkId" property="parkid"/>
+        <result column="parkName" property="parkName"/>
+        <result column="parkDir" property="parkDirPath"/>
+        <result column="parkFileName" property="parkUserName"/>
+        <result column="parkLable" property="parklable"/>
+        <result column="parkArea" property="parkArea"/>
+        <result column="parkDataStatus" property="parkDataStatus"/>
+        <collection property="builds" ofType="com.isoft.igis.park.domain.BuildMapInfo" select="ReleaseBuildService"
+                    column="parkId"/>
+    </resultMap>
+    <resultMap id="BuildMapInfo" type="com.isoft.igis.park.domain.BuildMapInfo">
+        <id column="buildId" property="buildid"/>
+        <result column="buildName" property="buildName"/>
+        <result column="buildFileName" property="buildUserName"/>
+        <result column="buildLable" property="buildlable"/>
+        <result column="buildArea" property="buildArea"/>
+        <result column="parkId" property="parkid"/>
+        <collection property="floors" ofType="com.isoft.igis.park.domain.FloorMaoInfo" select="ReleaseFloorService"
+                    column="buildId"/>
+    </resultMap>
+    <resultMap id="FloorMaoInfo" type="com.isoft.igis.park.domain.FloorMaoInfo">
+        <id column="floorId" property="floorid"/>
+        <result column="floorName" property="floorName"/>
+        <result column="floorFileName" property="floorUserName"/>
+        <result column="floorLable" property="floorlable"/>
+        <result column="floorArea" property="floorArea"/>
+        <result column="buildId" property="buildid"/>
+        <result column="floorDataStatus" property="floorDataStatus"/>
+        <result column="NavigationDataStatus" property="NavigationDataStatus"/>
+    </resultMap>
+    <select id="listTree" resultMap="ParkMapInfo" parameterType="com.isoft.igis.park.domain.QueryInfo">
+        select parkId, parkName ,parkLable,parkDir,parkDataStatus,parkArea
+        from t_park
+        <if test="parkName != null">
+            where parkName like #{parkName}
+        </if>
+        <if test="pageNum != null and pageSize != null">
+            limit #{pageNum}, #{pageSize}
+        </if>
+    </select>
+    <select id="ReleaseParkService" resultMap="ParkMapInfo" parameterType="Long">
+        select parkId, parkName,parkDir,parkFileName,parkLable,parkDataStatus,parkArea
+        from t_park
+        where parkId = #{parkid}
+    </select>
+    <select id="ReleaseBuildService" resultMap="BuildMapInfo" parameterType="Long">
+        select buildId,buildName,parkId,buildFileName,buildLable,buildArea
+        from t_building
+        where parkId = #{parkid}
+    </select>
+    <select id="ReleaseFloorService" resultMap="FloorMaoInfo" parameterType="Long">
+        select floorId,floorName,floorFileName,floorLable,floorDataStatus,NavigationDataStatus,buildId,floorArea
+        from t_floor
+        where buildId = #{buildid}
+    </select>
+    <update id="setParkDataStatus" parameterType="Map">
+        update t_park
+        set parkDataStatus=#{ParkDataStatus}
+        where parkId = #{parkid}
+    </update>
+    <select id="getFileName" parameterType="Long" resultType="String">
+        select parkFileName from t_park where parkId=#{parkid}
+    </select>
+    <select id="findParkDataStatus" parameterType="Long" resultType="String">
+        select parkDataStatus from t_park where parkId=#{parkid}
+    </select>
+    <select id="findParkIdByParkFileName" resultType="Long" parameterType="String">
+        select parkId from t_park where parkFileName=#{parkFileName}
+    </select>
+</mapper>

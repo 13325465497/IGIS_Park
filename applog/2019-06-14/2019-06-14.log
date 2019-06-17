@@ -1,0 +1,353 @@
+2019-06-14 09:32:04 -Starting BootdoApplication on ISS490001001219 with PID 14796 (D:\Develop\IdeaProjects\Code\IGIS_Park\target\classes started by xincai in D:\Develop\IdeaProjects\Code\IGIS_Park)
+2019-06-14 09:32:04 -Running with Spring Boot v2.0.3.RELEASE, Spring v5.0.7.RELEASE
+2019-06-14 09:32:04 -The following profiles are active: dev
+2019-06-14 09:32:05 -Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@5403f35f: startup date [Fri Jun 14 09:32:05 CST 2019]; root of context hierarchy
+2019-06-14 09:32:08 -Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-06-14 09:32:10 -Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$382c0012] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-06-14 09:32:10 -Bean 'shiroConfig' of type [com.isoft.igis.system.config.ShiroConfig$$EnhancerBySpringCGLIB$$e0ff0c3f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-06-14 09:32:10 -Bean 'userRealm' of type [com.isoft.igis.system.shiro.UserRealm] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-06-14 09:32:11 -Bean 'cacheManager2' of type [net.sf.ehcache.CacheManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-06-14 09:32:11 -Bean 'ehCacheManager' of type [org.apache.shiro.cache.ehcache.EhCacheManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-06-14 09:32:11 -Cache with name 'com.isoft.igis.system.shiro.UserRealm.authorizationCache' does not yet exist.  Creating now.
+2019-06-14 09:32:11 -Added EhCache named [com.isoft.igis.system.shiro.UserRealm.authorizationCache]
+2019-06-14 09:32:11 -Bean 'sessionDAO' of type [org.apache.shiro.session.mgt.eis.MemorySessionDAO] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-06-14 09:32:11 -Bean 'sessionManager' of type [org.apache.shiro.web.session.mgt.DefaultWebSessionManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-06-14 09:32:11 -Bean 'securityManager' of type [org.apache.shiro.web.mgt.DefaultWebSecurityManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-06-14 09:32:11 -Bean 'authorizationAttributeSourceAdvisor' of type [org.apache.shiro.spring.security.interceptor.AuthorizationAttributeSourceAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-06-14 09:32:12 -Tomcat initialized with port(s): 9999 (http)
+2019-06-14 09:32:13 -Initializing ProtocolHandler ["http-nio-9999"]
+2019-06-14 09:32:13 -Starting service [Tomcat]
+2019-06-14 09:32:13 -Starting Servlet Engine: Apache Tomcat/8.5.31
+2019-06-14 09:32:13 -The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_91\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files (x86)\HP\NV\lib\shunra\vcat;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;E:\XY\Tools\apache-ant-1.9.7\bin;C:\mingw-w64\x86_64-7.1.0-posix-seh-rt_v5-rev0\mingw64\bin;E:\XY\Install_64\bin;E:\XY\Tools\jdk8u102\jre\bin;E:\XY\Tools\jdk8u102\bin;D:\Program Files\apache-maven-3.5.2-bin\apache-maven-3.5.2\bin;E:\XY\netCDF 4.4.1.1\bin;D:\Program Files\apache-maven-3.5.2-bin\apache-maven-3.5.2\bin;C:\Program Files\Git\cmd;C:\Program Files\IDM Computer Solutions\UltraEdit;C:\Program Files\nodejs\;C:\Program Files (x86)\PuTTY\;D:\Develop\mysql\bin;C:\Program Files\TortoiseSVN\bin;D:\Develop\tomcat\zookeeper\zookeeper-3.4.12/bin;D:\Develop\tomcat\zookeeper\zookeeper-3.4.12/conf;D:\Develop\apache-ant\apache-ant-1.10.5\bin;D:\Develop\ApacheAB\Apache24\bin;D:\Develop\AndroidSDKTools\platform-tools;D:\Develop\AndroidSDKTools\tools;D:\Develop\AndroidSDKTools\build-tools\28.0.3;D:\Develop\LoadRunner\strawberry-perl\perl\bin;C:\Program Files (x86)\HP\NV\lib\thirdparty\safenet\LDK\7.0;C:\Program Files (x86)\HP\NV\lib\shunra\snv;D:\Develop\IGIS\mapserver\3rdlibs\bin;.]
+2019-06-14 09:32:14 -Initializing Spring embedded WebApplicationContext
+2019-06-14 09:32:14 -Root WebApplicationContext: initialization completed in 9040 ms
+2019-06-14 09:32:14 -Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-06-14 09:32:14 -Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-06-14 09:32:14 -Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2019-06-14 09:32:14 -Mapping filter: 'requestContextFilter' to: [/*]
+2019-06-14 09:32:14 -Filter xssFilter was not registered (disabled)
+2019-06-14 09:32:14 -Mapping filter: 'webStatFilter' to urls: [/*]
+2019-06-14 09:32:14 -Mapping filter: 'corsFilter' to: [/*]
+2019-06-14 09:32:14 -Mapping filter: 'shiroFilterFactoryBean' to: [/*]
+2019-06-14 09:32:14 -Servlet statViewServlet mapped to [/druid/*]
+2019-06-14 09:32:14 -Servlet dispatcherServlet mapped to [/]
+2019-06-14 09:32:16 -{dataSource-1} inited
+2019-06-14 09:32:16 -ApplicationContext registed-->org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@5403f35f: startup date [Fri Jun 14 09:32:05 CST 2019]; root of context hierarchy
+2019-06-14 09:32:18 -Mapped "{[/common/dict/add],methods=[GET]}" onto java.lang.String com.isoft.igis.common.controller.DictController.add()
+2019-06-14 09:32:18 -Mapped "{[/common/dict/remove],methods=[POST]}" onto public com.isoft.igis.common.utils.R com.isoft.igis.common.controller.DictController.remove(java.lang.Long)
+2019-06-14 09:32:18 -Mapped "{[/common/dict/batchRemove],methods=[POST]}" onto public com.isoft.igis.common.utils.R com.isoft.igis.common.controller.DictController.remove(java.lang.Long[])
+2019-06-14 09:32:18 -Mapped "{[/common/dict/update]}" onto public com.isoft.igis.common.utils.R com.isoft.igis.common.controller.DictController.update(com.isoft.igis.common.domain.DictDO)
+2019-06-14 09:32:18 -Mapped "{[/common/dict/list],methods=[GET]}" onto public com.isoft.igis.common.utils.PageUtils com.isoft.igis.common.controller.DictController.list(java.util.Map<java.lang.String, java.lang.Object>)
+2019-06-14 09:32:18 -Mapped "{[/common/dict/save],methods=[POST]}" onto public com.isoft.igis.common.utils.R com.isoft.igis.common.controller.DictController.save(com.isoft.igis.common.domain.DictDO)
+2019-06-14 09:32:18 -Mapped "{[/common/dict/type],methods=[GET]}" onto public java.util.List<com.isoft.igis.common.domain.DictDO> com.isoft.igis.common.controller.DictController.listType()
+2019-06-14 09:32:18 -Mapped "{[/common/dict],methods=[GET]}" onto java.lang.String com.isoft.igis.common.controller.DictController.dict()
+2019-06-14 09:32:18 -Mapped "{[/common/dict/edit/{id}],methods=[GET]}" onto java.lang.String com.isoft.igis.common.controller.DictController.edit(java.lang.Long,org.springframework.ui.Model)
+2019-06-14 09:32:18 -Mapped "{[/common/dict/add/{type}/{description}],methods=[GET]}" onto java.lang.String com.isoft.igis.common.controller.DictController.addD(org.springframework.ui.Model,java.lang.String,java.lang.String)
+2019-06-14 09:32:18 -Mapped "{[/common/dict/list/{type}],methods=[GET]}" onto public java.util.List<com.isoft.igis.common.domain.DictDO> com.isoft.igis.common.controller.DictController.listByType(java.lang.String)
+2019-06-14 09:32:18 -Mapped "{[/common/sysFile/add],methods=[GET]}" onto java.lang.String com.isoft.igis.common.controller.FileController.add()
+2019-06-14 09:32:18 -Mapped "{[/common/sysFile/remove],methods=[POST]}" onto public com.isoft.igis.common.utils.R com.isoft.igis.common.controller.FileController.remove(java.lang.Long,javax.servlet.http.HttpServletRequest)
+2019-06-14 09:32:18 -Mapped "{[/common/sysFile/batchRemove],methods=[POST]}" onto public com.isoft.igis.common.utils.R com.isoft.igis.common.controller.FileController.remove(java.lang.Long[])
+2019-06-14 09:32:18 -Mapped "{[/common/sysFile/update]}" onto public com.isoft.igis.common.utils.R com.isoft.igis.common.controller.FileController.update(com.isoft.igis.common.domain.FileDO)
+2019-06-14 09:32:18 -Mapped "{[/common/sysFile/list],methods=[GET]}" onto public com.isoft.igis.common.utils.PageUtils com.isoft.igis.common.controller.FileController.list(java.util.Map<java.lang.String, java.lang.Object>)
+2019-06-14 09:32:18 -Mapped "{[/common/sysFile/save],methods=[POST]}" onto public com.isoft.igis.common.utils.R com.isoft.igis.common.controller.FileController.save(com.isoft.igis.common.domain.FileDO)
+2019-06-14 09:32:18 -Mapped "{[/common/sysFile/info/{id}]}" onto public com.isoft.igis.common.utils.R com.isoft.igis.common.controller.FileController.info(java.lang.Long)
+2019-06-14 09:32:18 -Mapped "{[/common/sysFile/edit],methods=[GET]}" onto java.lang.String com.isoft.igis.common.controller.FileController.edit(java.lang.Long,org.springframework.ui.Model)
+2019-06-14 09:32:18 -Mapped "{[/common/sysFile],methods=[GET]}" onto java.lang.String com.isoft.igis.common.controller.FileController.sysFile(org.springframework.ui.Model)
+2019-06-14 09:32:18 -Mapped "{[/common/sysFile/upload],methods=[POST]}" onto com.isoft.igis.common.utils.R com.isoft.igis.common.controller.FileController.upload(org.springframework.web.multipart.MultipartFile,javax.servlet.http.HttpServletRequest)
+2019-06-14 09:32:18 -Mapped "{[/common/generator/update],methods=[POST]}" onto com.isoft.igis.common.utils.R com.isoft.igis.common.controller.GeneratorController.update(java.util.Map<java.lang.String, java.lang.Object>)
+2019-06-14 09:32:18 -Mapped "{[/common/generator/list],methods=[GET]}" onto java.util.List<java.util.Map<java.lang.String, java.lang.Object>> com.isoft.igis.common.controller.GeneratorController.list()
+2019-06-14 09:32:18 -Mapped "{[/common/generator/code/{tableName}]}" onto public void com.isoft.igis.common.controller.GeneratorController.code(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,java.lang.String) throws java.io.IOException
+2019-06-14 09:32:18 -Mapped "{[/common/generator],methods=[GET]}" onto java.lang.String com.isoft.igis.common.controller.GeneratorController.generator()
+2019-06-14 09:32:18 -Mapped "{[/common/generator/edit],methods=[GET]}" onto public java.lang.String com.isoft.igis.common.controller.GeneratorController.edit(org.springframework.ui.Model)
+2019-06-14 09:32:18 -Mapped "{[/common/generator/batchCode]}" onto public void com.isoft.igis.common.controller.GeneratorController.batchCode(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,java.lang.String) throws java.io.IOException
+2019-06-14 09:32:18 -Mapped "{[/common/log/remove],methods=[POST]}" onto com.isoft.igis.common.utils.R com.isoft.igis.common.controller.LogController.remove(java.lang.Long)
+2019-06-14 09:32:18 -Mapped "{[/common/log],methods=[GET]}" onto java.lang.String com.isoft.igis.common.controller.LogController.log()
+2019-06-14 09:32:18 -Mapped "{[/common/log/list],methods=[GET]}" onto com.isoft.igis.common.domain.PageDO<com.isoft.igis.common.domain.LogDO> com.isoft.igis.common.controller.LogController.list(java.util.Map<java.lang.String, java.lang.Object>)
+2019-06-14 09:32:18 -Mapped "{[/common/log/batchRemove],methods=[POST]}" onto com.isoft.igis.common.utils.R com.isoft.igis.common.controller.LogController.batchRemove(java.lang.Long[])
+2019-06-14 09:32:18 -Mapped "{[/error]}" onto public com.isoft.igis.common.utils.R com.isoft.igis.common.exception.MainsiteErrorController.handleError(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-06-14 09:32:18 -Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView com.isoft.igis.common.exception.MainsiteErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-06-14 09:32:18 -Mapped "{[/point/search],methods=[POST]}" onto public java.util.List<com.isoft.igis.edit.domain.PointInfo> com.isoft.igis.edit.controller.PointController.search(com.isoft.igis.edit.domain.PointDataInfo)
+2019-06-14 09:32:18 -Mapped "{[/point/ImportPoint],methods=[POST]}" onto public com.isoft.igis.common.utils.R com.isoft.igis.edit.controller.PointController.ImportPoint(org.springframework.web.multipart.MultipartFile) throws java.io.IOException
+2019-06-14 09:32:18 -Mapped "{[/point/ImportPoint],methods=[GET]}" onto public java.lang.String com.isoft.igis.edit.controller.PointController.ImportPoint()
+2019-06-14 09:32:18 -Mapped "{[/edit/getUserData],methods=[GET]}" onto public java.lang.Object com.isoft.igis.edit.controller.PointEditController.list(java.util.Map<java.lang.String, java.lang.Object>)
+2019-06-14 09:32:18 -Mapped "{[/edit/editFloorData],methods=[POST]}" onto public java.lang.Object com.isoft.igis.edit.controller.PointEditController.editFloorData(com.isoft.igis.edit.domain.UserPointsInfo)
+2019-06-14 09:32:18 -Mapped "{[/edit/getParkData]}" onto public com.isoft.igis.edit.domain.EditDataInfo com.isoft.igis.edit.controller.PointEditController.getParkData(java.lang.String)
+2019-06-14 09:32:18 -Mapped "{[/edit/editParkData],methods=[POST]}" onto public java.lang.Object com.isoft.igis.edit.controller.PointEditController.editParkData(com.isoft.igis.edit.domain.UserPointsInfo)
+2019-06-14 09:32:18 -Mapped "{[/edit/getFloorData]}" onto public com.isoft.igis.edit.domain.EditDataInfo com.isoft.igis.edit.controller.PointEditController.getFloorData(java.lang.String,java.lang.String,java.lang.String)
+2019-06-14 09:32:18 -Mapped "{[/edit/userPoint/remove],methods=[POST]}" onto public com.isoft.igis.common.utils.R com.isoft.igis.edit.controller.UserPointController.remove(java.lang.Long)
+2019-06-14 09:32:18 -Mapped "{[/edit/userPoint/batchRemove],methods=[POST]}" onto public com.isoft.igis.common.utils.R com.isoft.igis.edit.controller.UserPointController.remove(java.lang.Long[])
+2019-06-14 09:32:18 -Mapped "{[/edit/userPoint/update]}" onto public com.isoft.igis.common.utils.R com.isoft.igis.edit.controller.UserPointController.update(com.isoft.igis.edit.domain.UserPointDO)
+2019-06-14 09:32:18 -Mapped "{[/edit/userPoint/list],methods=[GET]}" onto public com.isoft.igis.common.utils.PageUtils com.isoft.igis.edit.controller.UserPointController.list(java.util.Map<java.lang.String, java.lang.Object>)
+2019-06-14 09:32:18 -Mapped "{[/edit/userPoint/save],methods=[POST]}" onto public com.isoft.igis.common.utils.R com.isoft.igis.edit.controller.UserPointController.save(com.isoft.igis.edit.domain.UserPointDO)
+2019-06-14 09:32:18 -Mapped "{[/park/building/add/{parkId}/{parkName}],methods=[GET]}" onto java.lang.String com.isoft.igis.park.controller.BuildingController.add(org.springframework.ui.Model,java.lang.Long,java.lang.String)
+2019-06-14 09:32:18 -Mapped "{[/park/building/remove],methods=[POST]}" onto public com.isoft.igis.common.utils.R com.isoft.igis.park.controller.BuildingController.remove(java.lang.Long)
+2019-06-14 09:32:18 -Mapped "{[/park/building/batchRemove],methods=[POST]}" onto public com.isoft.igis.common.utils.R com.isoft.igis.park.controller.BuildingController.remove(java.lang.Long[])
+2019-06-14 09:32:18 -Mapped "{[/park/building/update]}" onto public com.isoft.igis.common.utils.R com.isoft.igis.park.controller.BuildingController.update(com.isoft.igis.park.domain.BuildingDO)
+2019-06-14 09:32:18 -Mapped "{[/park/building/list],methods=[GET]}" onto public com.isoft.igis.common.utils.PageUtils com.isoft.igis.park.controller.BuildingController.list(java.util.Map<java.lang.String, java.lang.Object>)
+2019-06-14 09:32:18 -Mapped "{[/park/building/save],methods=[POST]}" onto public com.isoft.igis.common.utils.R com.isoft.igis.park.controller.BuildingController.save(com.isoft.igis.park.domain.BuildingDO)
+2019-06-14 09:32:18 -Mapped "{[/park/building/edit/{buildid}],methods=[GET]}" onto java.lang.String com.isoft.igis.park.controller.BuildingController.edit(java.lang.Long,org.springframework.ui.Model)
+2019-06-14 09:32:18 -Mapped "{[/park/building],methods=[GET]}" onto java.lang.String com.isoft.igis.park.controller.BuildingController.Building()
+2019-06-14 09:32:18 -Mapped "{[/park/floor/add/{buildId}/{buildName}],methods=[GET]}" onto java.lang.String com.isoft.igis.park.controller.FloorController.add(org.springframework.ui.Model,java.lang.Long,java.lang.String)
+2019-06-14 09:32:18 -Mapped "{[/park/floor/remove],methods=[POST]}" onto public com.isoft.igis.common.utils.R com.isoft.igis.park.controller.FloorController.remove(java.lang.Long)
+2019-06-14 09:32:18 -Mapped "{[/park/floor/batchRemove],methods=[POST]}" onto public com.isoft.igis.common.utils.R com.isoft.igis.park.controller.FloorController.remove(java.lang.Long[])
+2019-06-14 09:32:18 -Mapped "{[/park/floor/update]}" onto public com.isoft.igis.common.utils.R com.isoft.igis.park.controller.FloorController.update(com.isoft.igis.park.domain.FloorDO)
+2019-06-14 09:32:18 -Mapped "{[/park/floor/list],methods=[GET]}" onto public com.isoft.igis.common.utils.PageUtils com.isoft.igis.park.controller.FloorController.list(java.util.Map<java.lang.String, java.lang.Object>)
+2019-06-14 09:32:18 -Mapped "{[/park/floor/save],methods=[POST]}" onto public com.isoft.igis.common.utils.R com.isoft.igis.park.controller.FloorController.save(com.isoft.igis.park.domain.FloorDO)
+2019-06-14 09:32:18 -Mapped "{[/park/floor/edit/{floorid}],methods=[GET]}" onto java.lang.String com.isoft.igis.park.controller.FloorController.edit(java.lang.Long,org.springframework.ui.Model)
+2019-06-14 09:32:18 -Mapped "{[/park/floor],methods=[GET]}" onto java.lang.String com.isoft.igis.park.controller.FloorController.Floor()
+2019-06-14 09:32:18 -Mapped "{[/park/floor/indoorAddData],methods=[POST]}" onto public com.isoft.igis.common.utils.R com.isoft.igis.park.controller.FloorController.indoorAdd(java.lang.Long,org.springframework.web.multipart.MultipartFile[])
+2019-06-14 09:32:18 -Mapped "{[/park/floor/indoorAdd/{floorid}],methods=[GET]}" onto java.lang.String com.isoft.igis.park.controller.FloorController.indoorAdd(java.lang.Long,org.springframework.ui.Model)
+2019-06-14 09:32:18 -Mapped "{[/park/floor/getBuilding],methods=[GET]}" onto com.isoft.igis.common.utils.R com.isoft.igis.park.controller.FloorController.getBuilding(java.lang.Long)
+2019-06-14 09:32:18 -Mapped "{[/park/park/add],methods=[GET]}" onto java.lang.String com.isoft.igis.park.controller.ParkController.add()
+2019-06-14 09:32:18 -Mapped "{[/park/park/batchRemove],methods=[POST]}" onto public com.isoft.igis.common.utils.R com.isoft.igis.park.controller.ParkController.remove(java.lang.Long[])
+2019-06-14 09:32:18 -Mapped "{[/park/park/remove],methods=[POST]}" onto public com.isoft.igis.common.utils.R com.isoft.igis.park.controller.ParkController.remove(java.lang.Long)
+2019-06-14 09:32:18 -Mapped "{[/park/park/update]}" onto public com.isoft.igis.common.utils.R com.isoft.igis.park.controller.ParkController.update(com.isoft.igis.park.domain.ParkDO)
+2019-06-14 09:32:18 -Mapped "{[/park/park/list],methods=[GET]}" onto public com.isoft.igis.common.utils.PageUtils com.isoft.igis.park.controller.ParkController.list(java.util.Map<java.lang.String, java.lang.Object>)
+2019-06-14 09:32:18 -Mapped "{[/park/park/save],methods=[POST]}" onto public com.isoft.igis.common.utils.R com.isoft.igis.park.controller.ParkController.save(com.isoft.igis.park.domain.ParkDO)
+2019-06-14 09:32:18 -Mapped "{[/park/park/edit/{parkid}],methods=[GET]}" onto java.lang.String com.isoft.igis.park.controller.ParkController.edit(java.lang.Long,org.springframework.ui.Model)
+2019-06-14 09:32:18 -Mapped "{[/park/park/getParkRegionName]}" onto public java.util.List<java.lang.String> com.isoft.igis.park.controller.ParkController.getParkData(java.lang.String)
+2019-06-14 09:32:18 -Mapped "{[/park/park/findParkDataStatus/{parkid}],methods=[POST]}" onto public boolean com.isoft.igis.park.controller.ParkController.findParkDataStatus(java.lang.Long)
+2019-06-14 09:32:18 -Mapped "{[/park/park/baseMap/get]}" onto public java.lang.String com.isoft.igis.park.controller.ParkController.baseMapGetBaseMapUrl()
+2019-06-14 09:32:18 -Mapped "{[/park/park],methods=[GET]}" onto java.lang.String com.isoft.igis.park.controller.ParkController.Park()
+2019-06-14 09:32:18 -Mapped "{[/park/park/baseMap],methods=[GET]}" onto java.lang.String com.isoft.igis.park.controller.ParkController.baseMap()
+2019-06-14 09:32:18 -Mapped "{[/park/park/data],methods=[GET]}" onto java.lang.String com.isoft.igis.park.controller.ParkController.ParkData()
+2019-06-14 09:32:18 -Mapped "{[/park/park/igisEdit],methods=[GET]}" onto java.lang.String com.isoft.igis.park.controller.ParkController.igisEdit()
+2019-06-14 09:32:18 -Mapped "{[/park/park/listTree]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.isoft.igis.park.controller.ParkController.listTree(com.isoft.igis.park.domain.QueryInfo)
+2019-06-14 09:32:18 -Mapped "{[/park/park/outdoorAdd/{parkid}],methods=[GET]}" onto java.lang.String com.isoft.igis.park.controller.ParkController.outdoorAdd(java.lang.Long,org.springframework.ui.Model)
+2019-06-14 09:32:18 -Mapped "{[/park/park/outdoorAddData],methods=[POST]}" onto public com.isoft.igis.common.utils.R com.isoft.igis.park.controller.ParkController.outdoorAddData(java.lang.Long,org.springframework.web.multipart.MultipartFile[])
+2019-06-14 09:32:18 -Mapped "{[/park/park/ReleaseService/{parkid}],methods=[GET]}" onto public com.isoft.igis.park.domain.ParkMapInfo com.isoft.igis.park.controller.ParkController.ReleaseService(java.lang.Long)
+2019-06-14 09:32:18 -Mapped "{[/park/park/baseMap/update]}" onto public com.isoft.igis.common.utils.R com.isoft.igis.park.controller.ParkController.baseMapUpdate(java.lang.String)
+2019-06-14 09:32:18 -Mapped "{[/park/parkService/remove],methods=[POST]}" onto public com.isoft.igis.common.utils.R com.isoft.igis.park.controller.ParkServiceController.remove(java.lang.String)
+2019-06-14 09:32:18 -Mapped "{[/park/parkService/batchRemove],methods=[POST]}" onto public com.isoft.igis.common.utils.R com.isoft.igis.park.controller.ParkServiceController.remove(java.lang.Long[])
+2019-06-14 09:32:18 -Mapped "{[/park/parkService/get]}" onto public com.isoft.igis.park.domain.ParkServiceDO com.isoft.igis.park.controller.ParkServiceController.get(java.lang.Long)
+2019-06-14 09:32:18 -Mapped "{[/park/parkService/update],methods=[POST]}" onto public com.isoft.igis.common.utils.R com.isoft.igis.park.controller.ParkServiceController.update(com.isoft.igis.park.domain.ParkServiceDO)
+2019-06-14 09:32:18 -Mapped "{[/park/parkService/list]}" onto public com.isoft.igis.common.utils.PageUtils com.isoft.igis.park.controller.ParkServiceController.list(java.util.Map<java.lang.String, java.lang.Object>)
+2019-06-14 09:32:18 -Mapped "{[/park/parkService/save],methods=[POST]}" onto public com.isoft.igis.common.utils.R com.isoft.igis.park.controller.ParkServiceController.save(com.isoft.igis.park.domain.ParkServiceDO)
+2019-06-14 09:32:18 -Mapped "{[/park/parkService/getFileName/{type}/{id}],methods=[POST]}" onto public java.util.Map<java.lang.String, java.lang.String> com.isoft.igis.park.controller.ParkServiceController.getFileName(java.lang.Integer,java.lang.Long)
+2019-06-14 09:32:18 -Mapped "{[/park/parkService/generate/{id}],methods=[GET]}" onto java.lang.String com.isoft.igis.park.controller.ParkServiceController.generate(org.springframework.ui.Model,java.lang.Long)
+2019-06-14 09:32:18 -Mapped "{[/park/parkService],methods=[GET]}" onto java.lang.String com.isoft.igis.park.controller.ParkServiceController.Park()
+2019-06-14 09:32:18 -Mapped "{[/system/sysDept/add/{pId}],methods=[GET]}" onto java.lang.String com.isoft.igis.system.controller.DeptController.add(java.lang.Long,org.springframework.ui.Model)
+2019-06-14 09:32:18 -Mapped "{[/system/sysDept/remove],methods=[POST]}" onto public com.isoft.igis.common.utils.R com.isoft.igis.system.controller.DeptController.remove(java.lang.Long)
+2019-06-14 09:32:18 -Mapped "{[/system/sysDept/batchRemove],methods=[POST]}" onto public com.isoft.igis.common.utils.R com.isoft.igis.system.controller.DeptController.remove(java.lang.Long[])
+2019-06-14 09:32:18 -Mapped "{[/system/sysDept/update]}" onto public com.isoft.igis.common.utils.R com.isoft.igis.system.controller.DeptController.update(com.isoft.igis.system.domain.DeptDO)
+2019-06-14 09:32:18 -Mapped "{[/system/sysDept/list],methods=[GET]}" onto public java.util.List<com.isoft.igis.system.domain.DeptDO> com.isoft.igis.system.controller.DeptController.list()
+2019-06-14 09:32:18 -Mapped "{[/system/sysDept/save],methods=[POST]}" onto public com.isoft.igis.common.utils.R com.isoft.igis.system.controller.DeptController.save(com.isoft.igis.system.domain.DeptDO)
+2019-06-14 09:32:18 -Mapped "{[/system/sysDept/tree],methods=[GET]}" onto public com.isoft.igis.common.domain.Tree<com.isoft.igis.system.domain.DeptDO> com.isoft.igis.system.controller.DeptController.tree()
+2019-06-14 09:32:18 -Mapped "{[/system/sysDept/edit/{deptId}],methods=[GET]}" onto java.lang.String com.isoft.igis.system.controller.DeptController.edit(java.lang.Long,org.springframework.ui.Model)
+2019-06-14 09:32:18 -Mapped "{[/system/sysDept],methods=[GET]}" onto java.lang.String com.isoft.igis.system.controller.DeptController.dept()
+2019-06-14 09:32:18 -Mapped "{[/system/sysDept/treeView],methods=[GET]}" onto java.lang.String com.isoft.igis.system.controller.DeptController.treeView()
+2019-06-14 09:32:18 -Mapped "{[/index],methods=[GET]}" onto java.lang.String com.isoft.igis.system.controller.LoginController.index(org.springframework.ui.Model)
+2019-06-14 09:32:18 -Mapped "{[/main],methods=[GET]}" onto java.lang.String com.isoft.igis.system.controller.LoginController.main()
+2019-06-14 09:32:18 -Mapped "{[/login],methods=[GET]}" onto java.lang.String com.isoft.igis.system.controller.LoginController.login(org.springframework.ui.Model)
+2019-06-14 09:32:18 -Mapped "{[/logout],methods=[GET]}" onto java.lang.String com.isoft.igis.system.controller.LoginController.logout()
+2019-06-14 09:32:18 -Mapped "{[/ || ],methods=[GET]}" onto java.lang.String com.isoft.igis.system.controller.LoginController.welcome(org.springframework.ui.Model)
+2019-06-14 09:32:18 -Mapped "{[/login],methods=[POST]}" onto com.isoft.igis.common.utils.R com.isoft.igis.system.controller.LoginController.ajaxLogin(java.lang.String,java.lang.String)
+2019-06-14 09:32:18 -Mapped "{[/sys/menu/add/{pId}],methods=[GET]}" onto java.lang.String com.isoft.igis.system.controller.MenuController.add(org.springframework.ui.Model,java.lang.Long)
+2019-06-14 09:32:18 -Mapped "{[/sys/menu/remove],methods=[POST]}" onto com.isoft.igis.common.utils.R com.isoft.igis.system.controller.MenuController.remove(java.lang.Long)
+2019-06-14 09:32:18 -Mapped "{[/sys/menu/update],methods=[POST]}" onto com.isoft.igis.common.utils.R com.isoft.igis.system.controller.MenuController.update(com.isoft.igis.system.domain.MenuDO)
+2019-06-14 09:32:18 -Mapped "{[/sys/menu/list]}" onto java.util.List<com.isoft.igis.system.domain.MenuDO> com.isoft.igis.system.controller.MenuController.list(java.util.Map<java.lang.String, java.lang.Object>)
+2019-06-14 09:32:18 -Mapped "{[/sys/menu/save],methods=[POST]}" onto com.isoft.igis.common.utils.R com.isoft.igis.system.controller.MenuController.save(com.isoft.igis.system.domain.MenuDO)
+2019-06-14 09:32:18 -Mapped "{[/sys/menu/tree/{roleId}],methods=[GET]}" onto com.isoft.igis.common.domain.Tree<com.isoft.igis.system.domain.MenuDO> com.isoft.igis.system.controller.MenuController.tree(java.lang.Long)
+2019-06-14 09:32:18 -Mapped "{[/sys/menu/tree],methods=[GET]}" onto com.isoft.igis.common.domain.Tree<com.isoft.igis.system.domain.MenuDO> com.isoft.igis.system.controller.MenuController.tree()
+2019-06-14 09:32:18 -Mapped "{[/sys/menu/edit/{id}],methods=[GET]}" onto java.lang.String com.isoft.igis.system.controller.MenuController.edit(org.springframework.ui.Model,java.lang.Long)
+2019-06-14 09:32:18 -Mapped "{[/sys/menu],methods=[GET]}" onto java.lang.String com.isoft.igis.system.controller.MenuController.menu(org.springframework.ui.Model)
+2019-06-14 09:32:18 -Mapped "{[/sys/role/add],methods=[GET]}" onto java.lang.String com.isoft.igis.system.controller.RoleController.add()
+2019-06-14 09:32:18 -Mapped "{[/sys/role/update],methods=[POST]}" onto com.isoft.igis.common.utils.R com.isoft.igis.system.controller.RoleController.update(com.isoft.igis.system.domain.RoleDO)
+2019-06-14 09:32:18 -Mapped "{[/sys/role/list],methods=[GET]}" onto java.util.List<com.isoft.igis.system.domain.RoleDO> com.isoft.igis.system.controller.RoleController.list()
+2019-06-14 09:32:18 -Mapped "{[/sys/role/remove],methods=[POST]}" onto com.isoft.igis.common.utils.R com.isoft.igis.system.controller.RoleController.save(java.lang.Long)
+2019-06-14 09:32:18 -Mapped "{[/sys/role/save],methods=[POST]}" onto com.isoft.igis.common.utils.R com.isoft.igis.system.controller.RoleController.save(com.isoft.igis.system.domain.RoleDO)
+2019-06-14 09:32:18 -Mapped "{[/sys/role/batchRemove],methods=[POST]}" onto com.isoft.igis.common.utils.R com.isoft.igis.system.controller.RoleController.batchRemove(java.lang.Long[])
+2019-06-14 09:32:18 -Mapped "{[/sys/role],methods=[GET]}" onto java.lang.String com.isoft.igis.system.controller.RoleController.role()
+2019-06-14 09:32:18 -Mapped "{[/sys/role/edit/{id}],methods=[GET]}" onto java.lang.String com.isoft.igis.system.controller.RoleController.edit(java.lang.Long,org.springframework.ui.Model)
+2019-06-14 09:32:18 -Mapped "{[/sys/online/list]}" onto public java.util.List<com.isoft.igis.system.domain.UserOnline> com.isoft.igis.system.controller.SessionController.list()
+2019-06-14 09:32:18 -Mapped "{[/sys/online],methods=[GET]}" onto public java.lang.String com.isoft.igis.system.controller.SessionController.online()
+2019-06-14 09:32:18 -Mapped "{[/sys/online/forceLogout/{sessionId}]}" onto public com.isoft.igis.common.utils.R com.isoft.igis.system.controller.SessionController.forceLogout(java.lang.String,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2019-06-14 09:32:18 -Mapped "{[/sys/online/sessionList]}" onto public java.util.Collection<org.apache.shiro.session.Session> com.isoft.igis.system.controller.SessionController.sessionList()
+2019-06-14 09:32:18 -Mapped "{[/sys/user/exit],methods=[POST]}" onto boolean com.isoft.igis.system.controller.UserController.exit(java.util.Map<java.lang.String, java.lang.Object>)
+2019-06-14 09:32:18 -Mapped "{[/sys/user/add],methods=[GET]}" onto java.lang.String com.isoft.igis.system.controller.UserController.add(org.springframework.ui.Model)
+2019-06-14 09:32:18 -Mapped "{[/sys/user/remove],methods=[POST]}" onto com.isoft.igis.common.utils.R com.isoft.igis.system.controller.UserController.remove(java.lang.Long)
+2019-06-14 09:32:18 -Mapped "{[/sys/user/update],methods=[POST]}" onto com.isoft.igis.common.utils.R com.isoft.igis.system.controller.UserController.update(com.isoft.igis.system.domain.UserDO)
+2019-06-14 09:32:18 -Mapped "{[/sys/user/list],methods=[GET]}" onto com.isoft.igis.common.utils.PageUtils com.isoft.igis.system.controller.UserController.list(java.util.Map<java.lang.String, java.lang.Object>)
+2019-06-14 09:32:18 -Mapped "{[/sys/user/save],methods=[POST]}" onto com.isoft.igis.common.utils.R com.isoft.igis.system.controller.UserController.save(com.isoft.igis.system.domain.UserDO)
+2019-06-14 09:32:18 -Mapped "{[/sys/user/batchRemove],methods=[POST]}" onto com.isoft.igis.common.utils.R com.isoft.igis.system.controller.UserController.batchRemove(java.lang.Long[])
+2019-06-14 09:32:18 -Mapped "{[/sys/user/tree],methods=[GET]}" onto public com.isoft.igis.common.domain.Tree<com.isoft.igis.system.domain.DeptDO> com.isoft.igis.system.controller.UserController.tree()
+2019-06-14 09:32:18 -Mapped "{[/sys/user],methods=[GET]}" onto java.lang.String com.isoft.igis.system.controller.UserController.user(org.springframework.ui.Model)
+2019-06-14 09:32:18 -Mapped "{[/sys/user/edit/{id}],methods=[GET]}" onto java.lang.String com.isoft.igis.system.controller.UserController.edit(org.springframework.ui.Model,java.lang.Long)
+2019-06-14 09:32:18 -Mapped "{[/sys/user/treeView],methods=[GET]}" onto java.lang.String com.isoft.igis.system.controller.UserController.treeView()
+2019-06-14 09:32:18 -Mapped "{[/sys/user/updatePeronal],methods=[POST]}" onto com.isoft.igis.common.utils.R com.isoft.igis.system.controller.UserController.updatePeronal(com.isoft.igis.system.domain.UserDO)
+2019-06-14 09:32:18 -Mapped "{[/sys/user/resetPwd],methods=[POST]}" onto com.isoft.igis.common.utils.R com.isoft.igis.system.controller.UserController.resetPwd(com.isoft.igis.system.vo.UserVO)
+2019-06-14 09:32:18 -Mapped "{[/sys/user/resetPwd/{id}],methods=[GET]}" onto java.lang.String com.isoft.igis.system.controller.UserController.resetPwd(java.lang.Long,org.springframework.ui.Model)
+2019-06-14 09:32:18 -Mapped "{[/sys/user/adminResetPwd],methods=[POST]}" onto com.isoft.igis.common.utils.R com.isoft.igis.system.controller.UserController.adminResetPwd(com.isoft.igis.system.vo.UserVO)
+2019-06-14 09:32:18 -Mapped "{[/sys/user/personal],methods=[GET]}" onto java.lang.String com.isoft.igis.system.controller.UserController.personal(org.springframework.ui.Model)
+2019-06-14 09:32:18 -Mapped "{[/sys/user/uploadImg],methods=[POST]}" onto com.isoft.igis.common.utils.R com.isoft.igis.system.controller.UserController.uploadImg(org.springframework.web.multipart.MultipartFile,java.lang.String,javax.servlet.http.HttpServletRequest)
+2019-06-14 09:32:18 -Mapped "{[/v2/api-docs],methods=[GET],produces=[application/json || application/hal+json]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)
+2019-06-14 09:32:18 -Mapped "{[/swagger-resources/configuration/ui]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+2019-06-14 09:32:18 -Mapped "{[/swagger-resources]}" onto org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+2019-06-14 09:32:18 -Mapped "{[/swagger-resources/configuration/security]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+2019-06-14 09:32:18 -Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-06-14 09:32:19 -Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@5403f35f: startup date [Fri Jun 14 09:32:05 CST 2019]; root of context hierarchy
+2019-06-14 09:32:19 -Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-06-14 09:32:19 -Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-06-14 09:32:19 -Mapped URL path [/files/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-06-14 09:32:19 -Detected @ExceptionHandler methods in BDExceptionHandler
+2019-06-14 09:32:19 -[THYMELEAF][main] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-06-14 09:32:19 -Adding welcome page: ServletContext resource [/index.html]
+2019-06-14 09:32:21 -Registering beans for JMX exposure on startup
+2019-06-14 09:32:21 -Bean with name 'dataSource' has been autodetected for JMX exposure
+2019-06-14 09:32:21 -Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource]
+2019-06-14 09:32:21 -Starting beans in phase 2147483647
+2019-06-14 09:32:21 -Context refreshed
+2019-06-14 09:32:21 -Found 1 custom documentation plugin(s)
+2019-06-14 09:32:21 -Scanning for api listing references
+2019-06-14 09:32:21 -Generating unique operation named: removeUsingPOST_1
+2019-06-14 09:32:21 -Generating unique operation named: addUsingGET_1
+2019-06-14 09:32:21 -Generating unique operation named: editUsingGET_1
+2019-06-14 09:32:21 -Generating unique operation named: listUsingGET_1
+2019-06-14 09:32:21 -Generating unique operation named: removeUsingPOST_2
+2019-06-14 09:32:21 -Generating unique operation named: removeUsingPOST_3
+2019-06-14 09:32:21 -Generating unique operation named: saveUsingPOST_1
+2019-06-14 09:32:21 -Generating unique operation named: updateUsingGET_1
+2019-06-14 09:32:21 -Generating unique operation named: updateUsingHEAD_1
+2019-06-14 09:32:21 -Generating unique operation named: updateUsingPOST_1
+2019-06-14 09:32:21 -Generating unique operation named: updateUsingPUT_1
+2019-06-14 09:32:21 -Generating unique operation named: updateUsingPATCH_1
+2019-06-14 09:32:21 -Generating unique operation named: updateUsingDELETE_1
+2019-06-14 09:32:21 -Generating unique operation named: updateUsingOPTIONS_1
+2019-06-14 09:32:21 -Generating unique operation named: updateUsingTRACE_1
+2019-06-14 09:32:21 -Generating unique operation named: addUsingGET_2
+2019-06-14 09:32:21 -Generating unique operation named: editUsingGET_2
+2019-06-14 09:32:21 -Generating unique operation named: listUsingGET_2
+2019-06-14 09:32:21 -Generating unique operation named: removeUsingPOST_4
+2019-06-14 09:32:21 -Generating unique operation named: removeUsingPOST_5
+2019-06-14 09:32:21 -Generating unique operation named: saveUsingPOST_2
+2019-06-14 09:32:21 -Generating unique operation named: updateUsingGET_2
+2019-06-14 09:32:21 -Generating unique operation named: updateUsingHEAD_2
+2019-06-14 09:32:21 -Generating unique operation named: updateUsingPOST_2
+2019-06-14 09:32:21 -Generating unique operation named: updateUsingPUT_2
+2019-06-14 09:32:21 -Generating unique operation named: updateUsingPATCH_2
+2019-06-14 09:32:21 -Generating unique operation named: updateUsingDELETE_2
+2019-06-14 09:32:21 -Generating unique operation named: updateUsingOPTIONS_2
+2019-06-14 09:32:21 -Generating unique operation named: updateUsingTRACE_2
+2019-06-14 09:32:21 -Generating unique operation named: addUsingGET_3
+2019-06-14 09:32:21 -Generating unique operation named: editUsingGET_3
+2019-06-14 09:32:21 -Generating unique operation named: listUsingGET_3
+2019-06-14 09:32:21 -Generating unique operation named: removeUsingPOST_6
+2019-06-14 09:32:21 -Generating unique operation named: removeUsingPOST_7
+2019-06-14 09:32:21 -Generating unique operation named: saveUsingPOST_3
+2019-06-14 09:32:21 -Generating unique operation named: updateUsingGET_3
+2019-06-14 09:32:21 -Generating unique operation named: updateUsingHEAD_3
+2019-06-14 09:32:21 -Generating unique operation named: updateUsingPOST_3
+2019-06-14 09:32:21 -Generating unique operation named: updateUsingPUT_3
+2019-06-14 09:32:21 -Generating unique operation named: updateUsingPATCH_3
+2019-06-14 09:32:21 -Generating unique operation named: updateUsingDELETE_3
+2019-06-14 09:32:21 -Generating unique operation named: updateUsingOPTIONS_3
+2019-06-14 09:32:21 -Generating unique operation named: updateUsingTRACE_3
+2019-06-14 09:32:21 -Generating unique operation named: addUsingGET_4
+2019-06-14 09:32:21 -Generating unique operation named: editUsingGET_4
+2019-06-14 09:32:21 -Trying to infer dataType org.springframework.web.multipart.MultipartFile[]
+2019-06-14 09:32:21 -Generating unique operation named: listUsingGET_4
+2019-06-14 09:32:21 -Generating unique operation named: removeUsingPOST_8
+2019-06-14 09:32:21 -Generating unique operation named: removeUsingPOST_9
+2019-06-14 09:32:21 -Generating unique operation named: saveUsingPOST_4
+2019-06-14 09:32:21 -Generating unique operation named: updateUsingGET_4
+2019-06-14 09:32:21 -Generating unique operation named: updateUsingHEAD_4
+2019-06-14 09:32:21 -Generating unique operation named: updateUsingPOST_4
+2019-06-14 09:32:21 -Generating unique operation named: updateUsingPUT_4
+2019-06-14 09:32:21 -Generating unique operation named: updateUsingPATCH_4
+2019-06-14 09:32:21 -Generating unique operation named: updateUsingDELETE_4
+2019-06-14 09:32:21 -Generating unique operation named: updateUsingOPTIONS_4
+2019-06-14 09:32:21 -Generating unique operation named: updateUsingTRACE_4
+2019-06-14 09:32:21 -Generating unique operation named: editUsingGET_5
+2019-06-14 09:32:21 -Generating unique operation named: listUsingGET_5
+2019-06-14 09:32:21 -Generating unique operation named: updateUsingPOST_5
+2019-06-14 09:32:21 -Generating unique operation named: listUsingGET_6
+2019-06-14 09:32:21 -Generating unique operation named: removeUsingPOST_10
+2019-06-14 09:32:21 -Generating unique operation named: welcomeUsingGET_1
+2019-06-14 09:32:21 -Generating unique operation named: addUsingGET_5
+2019-06-14 09:32:21 -Generating unique operation named: editUsingGET_6
+2019-06-14 09:32:21 -Generating unique operation named: listUsingGET_7
+2019-06-14 09:32:21 -Generating unique operation named: removeUsingPOST_11
+2019-06-14 09:32:21 -Generating unique operation named: saveUsingPOST_5
+2019-06-14 09:32:21 -Generating unique operation named: treeUsingGET_1
+2019-06-14 09:32:21 -Generating unique operation named: treeUsingGET_2
+2019-06-14 09:32:21 -Generating unique operation named: updateUsingPOST_6
+2019-06-14 09:32:21 -Generating unique operation named: addUsingGET_6
+2019-06-14 09:32:21 -Generating unique operation named: editUsingGET_7
+2019-06-14 09:32:21 -Generating unique operation named: listUsingGET_8
+2019-06-14 09:32:22 -Trying to infer dataType org.springframework.web.multipart.MultipartFile[]
+2019-06-14 09:32:22 -Generating unique operation named: removeUsingPOST_12
+2019-06-14 09:32:22 -Generating unique operation named: removeUsingPOST_13
+2019-06-14 09:32:22 -Generating unique operation named: saveUsingPOST_6
+2019-06-14 09:32:22 -Generating unique operation named: updateUsingGET_5
+2019-06-14 09:32:22 -Generating unique operation named: updateUsingHEAD_5
+2019-06-14 09:32:22 -Generating unique operation named: updateUsingPOST_7
+2019-06-14 09:32:22 -Generating unique operation named: updateUsingPUT_5
+2019-06-14 09:32:22 -Generating unique operation named: updateUsingPATCH_5
+2019-06-14 09:32:22 -Generating unique operation named: updateUsingDELETE_5
+2019-06-14 09:32:22 -Generating unique operation named: updateUsingOPTIONS_5
+2019-06-14 09:32:22 -Generating unique operation named: updateUsingTRACE_5
+2019-06-14 09:32:22 -Generating unique operation named: ParkUsingGET_1
+2019-06-14 09:32:22 -Generating unique operation named: listUsingGET_9
+2019-06-14 09:32:22 -Generating unique operation named: listUsingHEAD_1
+2019-06-14 09:32:22 -Generating unique operation named: listUsingPOST_1
+2019-06-14 09:32:22 -Generating unique operation named: listUsingPUT_1
+2019-06-14 09:32:22 -Generating unique operation named: listUsingPATCH_1
+2019-06-14 09:32:22 -Generating unique operation named: listUsingDELETE_1
+2019-06-14 09:32:22 -Generating unique operation named: listUsingOPTIONS_1
+2019-06-14 09:32:22 -Generating unique operation named: listUsingTRACE_1
+2019-06-14 09:32:22 -Generating unique operation named: removeUsingPOST_14
+2019-06-14 09:32:22 -Generating unique operation named: removeUsingPOST_15
+2019-06-14 09:32:22 -Generating unique operation named: saveUsingPOST_7
+2019-06-14 09:32:22 -Generating unique operation named: updateUsingPOST_8
+2019-06-14 09:32:22 -Generating unique operation named: getParkDataUsingGET_1
+2019-06-14 09:32:22 -Generating unique operation named: getParkDataUsingHEAD_1
+2019-06-14 09:32:22 -Generating unique operation named: getParkDataUsingPOST_1
+2019-06-14 09:32:22 -Generating unique operation named: getParkDataUsingPUT_1
+2019-06-14 09:32:22 -Generating unique operation named: getParkDataUsingPATCH_1
+2019-06-14 09:32:22 -Generating unique operation named: getParkDataUsingDELETE_1
+2019-06-14 09:32:22 -Generating unique operation named: getParkDataUsingOPTIONS_1
+2019-06-14 09:32:22 -Generating unique operation named: getParkDataUsingTRACE_1
+2019-06-14 09:32:22 -Generating unique operation named: listUsingGET_10
+2019-06-14 09:32:22 -Generating unique operation named: addUsingGET_7
+2019-06-14 09:32:22 -Generating unique operation named: batchRemoveUsingPOST_1
+2019-06-14 09:32:22 -Generating unique operation named: editUsingGET_8
+2019-06-14 09:32:22 -Generating unique operation named: listUsingGET_11
+2019-06-14 09:32:22 -Generating unique operation named: saveUsingPOST_8
+2019-06-14 09:32:22 -Generating unique operation named: saveUsingPOST_9
+2019-06-14 09:32:22 -Generating unique operation named: updateUsingPOST_9
+2019-06-14 09:32:22 -Generating unique operation named: listUsingGET_12
+2019-06-14 09:32:22 -Generating unique operation named: listUsingHEAD_2
+2019-06-14 09:32:22 -Generating unique operation named: listUsingPOST_2
+2019-06-14 09:32:22 -Generating unique operation named: listUsingPUT_2
+2019-06-14 09:32:22 -Generating unique operation named: listUsingPATCH_2
+2019-06-14 09:32:22 -Generating unique operation named: listUsingDELETE_2
+2019-06-14 09:32:22 -Generating unique operation named: listUsingOPTIONS_2
+2019-06-14 09:32:22 -Generating unique operation named: listUsingTRACE_2
+2019-06-14 09:32:22 -Generating unique operation named: addUsingGET_8
+2019-06-14 09:32:22 -Generating unique operation named: batchRemoveUsingPOST_2
+2019-06-14 09:32:22 -Generating unique operation named: editUsingGET_9
+2019-06-14 09:32:22 -Generating unique operation named: listUsingGET_13
+2019-06-14 09:32:22 -Generating unique operation named: removeUsingPOST_16
+2019-06-14 09:32:22 -Generating unique operation named: saveUsingPOST_10
+2019-06-14 09:32:22 -Generating unique operation named: treeUsingGET_3
+2019-06-14 09:32:22 -Generating unique operation named: treeViewUsingGET_1
+2019-06-14 09:32:22 -Generating unique operation named: updateUsingPOST_10
+2019-06-14 09:32:22 -Generating unique operation named: listUsingGET_14
+2019-06-14 09:32:22 -Generating unique operation named: removeUsingPOST_17
+2019-06-14 09:32:22 -Generating unique operation named: removeUsingPOST_18
+2019-06-14 09:32:22 -Generating unique operation named: saveUsingPOST_11
+2019-06-14 09:32:22 -Generating unique operation named: updateUsingGET_6
+2019-06-14 09:32:22 -Generating unique operation named: updateUsingHEAD_6
+2019-06-14 09:32:22 -Generating unique operation named: updateUsingPOST_11
+2019-06-14 09:32:22 -Generating unique operation named: updateUsingPUT_6
+2019-06-14 09:32:22 -Generating unique operation named: updateUsingPATCH_6
+2019-06-14 09:32:22 -Generating unique operation named: updateUsingDELETE_6
+2019-06-14 09:32:22 -Generating unique operation named: updateUsingOPTIONS_6
+2019-06-14 09:32:22 -Generating unique operation named: updateUsingTRACE_6
+2019-06-14 09:32:22 -No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+2019-06-14 09:32:22 -Starting ProtocolHandler ["http-nio-9999"]
+2019-06-14 09:32:22 -Using a shared selector for servlet write/read
+2019-06-14 09:32:22 -Tomcat started on port(s): 9999 (http) with context path '/IGIS_Park'
+2019-06-14 09:32:22 -Started BootdoApplication in 21.709 seconds (JVM running for 23.508)
+2019-06-14 09:32:22 -当前系统为 : windows
+2019-06-14 09:32:22 -配置写入config.js,失败!,地址:D:/Develop/IdeaProjects/Code/IGIS_Par/js/config.js,地址2:D:/Develop/IdeaProjects/Code/IGIS_Park/target/classes/static/js/config/config.js

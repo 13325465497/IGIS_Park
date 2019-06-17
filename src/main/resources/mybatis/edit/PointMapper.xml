@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.isoft.igis.edit.dao.PointDao">
+    <resultMap id="pointInfo" type="com.isoft.igis.edit.domain.PointInfo">
+        <id property="pointID" column="pointID" jdbcType="BIGINT" javaType="Long"></id>
+        <result property="parkName" column="parkName" jdbcType="VARCHAR" javaType="string"></result>
+        <result property="buildName" column="buildName" jdbcType="VARCHAR" javaType="string"></result>
+        <result property="floorName" column="floorName" jdbcType="VARCHAR" javaType="string"></result>
+        <result property="lable" column="lable" jdbcType="VARCHAR" javaType="string"></result>
+        <result property="iconUrl" column="iconUrl" jdbcType="VARCHAR" javaType="string"></result>
+        <result property="lon" column="lon"></result>
+        <result property="lat" column="lat"></result>
+        <result property="displayLevel" column="displayLevel" jdbcType="VARCHAR" javaType="string"></result>
+        <result property="pointType" column="pointType"></result>
+    </resultMap>
+    <select id="findAll" resultMap="pointInfo">
+        select pointID,
+               parkName,
+               buildName,
+               floorName,
+               lable,
+               iconUrl,
+               X(point) AS lon,
+               Y(point) as lat,
+               pointType,
+               displayLevel
+        from t_point
+    </select>
+    <insert id="add" parameterType="com.isoft.igis.edit.domain.PointInfo">
+        insert into t_point(parkName, buildName, floorName, lable, iconUrl, point, displayLevel, pointType)
+        values (#{parkName}, #{buildName}, #{floorName}, #{lable}, #{iconUrl}, GeomFromText('point(${lon} ${lat})'),
+                #{displayLevel}, #{pointType})
+    </insert>
+    <insert id="insertBatch" parameterType="java.util.List">
+        insert into t_point(parkName, buildName, floorName, lable, iconUrl, point , pointType,displayLevel) values
+        <foreach collection="pointInfoList" item="point" open="" separator="," close="">
+            (#{point.parkName},#{point.buildName},#{point.floorName},#{point.lable},#{point.iconUrl},GeomFromText("point(${point.lon}
+            ${point.lat})"),#{point.pointType},#{point.displayLevel})
+        </foreach>
+    </insert>
+    <select id="search" parameterType="com.isoft.igis.edit.domain.PointDataInfo" resultMap="pointInfo">
+        select pointID,
+        parkName,
+        buildName,
+        floorName,
+        lable,
+        iconUrl,
+        X(point) AS lon,
+        Y(point) as lat,
+        pointType,
+        displayLevel
+        from t_point
+        where 1=1
+        <if test="parkName !=null">
+            and parkName=#{parkName}
+        </if>
+        <if test="buildName==null">
+            and buildName is null
+        </if>
+        <if test="buildName !=null">
+            and buildName=#{buildName}
+        </if>
+        <if test="floorName==null">
+            and floorName is null
+        </if>
+        <if test="floorName !=null">
+            and floorName=#{floorName}
+        </if>
+        <if test="pointType !=null">
+            and pointType=#{pointType}
+        </if>
+        <if test="pointList != null">
+            and st_contains(st_geomfromtext("polygon((
+            <foreach collection="pointList" item="poi" open="" separator="," close="">
+                ${poi[0]} ${poi[1]}
+            </foreach>
+            ))"),point)=1
+        </if>
+        <if test="zoom != null">
+            AND (FIND_IN_SET(#{zoom}, displayLevel) OR displayLevel IS NULL);
+        </if>
+    </select>
+</mapper>

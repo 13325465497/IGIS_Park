@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<head th:include="include :: header"></head>
+<body class="gray-bg">
+<div class="wrapper wrapper-content ">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="ibox float-e-margins">
+                <div class="ibox-content" style="height: 730px;">
+                    <form class="form-horizontal m-t" id="signupForm" style="margin-top: 70px;">
+                        <div class="form-group">
+                            <label class="col-sm-1 control-label">底图Url：</label>
+                            <div class="col-sm-8">
+                                <textarea id="baseMapUrl" name="baseMapUrl"
+                                          class="form-control" cols="120" rows="7"></textarea>
+                            </div>
+                        </div>
+                        <div class="form-group" style="margin-top: 40px;">
+                            <div class="col-sm-9 col-sm-offset-3" style="margin-left: 35%;">
+                                <button type="button" id="but" style="width: 100px;" class="btn btn-primary">更新
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div th:include="include::footer"></div>
+<script th:inline="javascript">
+    var ctx = [[@{
+        /}]] ;
+
+        $("#but").click(function () {
+            var baseMapUrl = $("#baseMapUrl").val();
+            console.log(IsURL(baseMapUrl))
+            if (IsURL(baseMapUrl)) {
+                $.ajax({
+                    cache: true,
+                    type: "POST",
+                    url: ctx + "park/park/baseMap/update",
+                    data: {baseMapUrl: baseMapUrl},// 你的formid
+                    async: false,
+                    error: function (request) {
+                        parent.layer.alert("Connection error");
+                    },
+                    success: function (data) {
+                        if (data.code == 0) {
+                            parent.layer.msg("操作成功");
+                            $("#baseMapUrl").val("");
+                        } else {
+                            parent.layer.alert(data.msg)
+                        }
+                    }
+                });
+            } else {
+                parent.layer.msg("底图URl格式错误!")
+            }
+        });
+        var IsURL = function (str_url) {
+          var re=/(http|ftp|https):\/\/[\w\-_]+(\.[\w\-_]+)+([\w\-\.,@?^=%&:/~\+#]*[\w\-\@?^=%&/~\+#])?/;
+            //re.test()
+           return re.test(str_url);
+        }
+</script>
+</body>
+</html>

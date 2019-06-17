@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>IGIS</title>
+        <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+        <script src="/igis/iGis-min.ja" th:src="@{/igis/iGis-min.js}"></script>
+        <link rel="stylesheet" href="/IGIS_Park/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/IGIS_Park/css/igisEdit.css">
+    </head>
+
+    <body>
+        <div id="iGis2D">
+            <div class="popup-layer"></div>
+            <div class="igis_button">
+                <input type="button" class="igis_btn" value="点" id="Point" />
+                <hr />
+                <input type="button" class="igis_btn" value="保存" id="Save" />
+            </div>
+            <div id="marker" class="markerPop">
+                <div class="markerPop-top">
+                    <div class="top-title">
+                        <span>标记详情</span>
+                    </div>
+                    <div class="pop-close" id="pop-close">&times;</div>
+                </div>
+                <div class="markerPop-center">
+                    <ul class="userEdit" id="longitude"></ul>
+                    <button type="button" id="fun7">删除</button>
+                    <button type="button" id="fun5">保存</button>
+                </div>
+            </div>
+            <div id="markerImg">
+                <div class="markerImg-top">
+                    <div class="markerImg-title">
+                        <span>图标列表</span>
+                    </div>
+                    <div class="markerImg-close" id="markerImg-close">&times;</div>
+                </div>
+                <div class="markerImg-center"></div>
+            </div>
+        </div>
+    </body>
+    <script th:inline="javascript"> var ctx = [[@{
+        /}]] ; </script>
+    <script src="/js/jquery.min.js" th:src="@{/js/jquery.min.js}"></script>
+    <script src="/js/openTab.js" th:src="@{/js/openTab.js}"></script>
+    <script src="/igis/igisEdit.js" th:src="@{/igis/igisEdit.js}"></script>
+</html>

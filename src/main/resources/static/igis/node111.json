@@ -1,0 +1,484 @@
+{
+	"type": "FeatureCollection",
+	"features": [{
+			"type": "Feature",
+			"id": 0,
+			"properties": {
+				"Id": 0,
+				"name": "电梯",
+				"category": "25136",
+				"poitype": "elevator",
+				"display": "15,16,17,18,19,20,21,22,",
+				"icon": "\/image\/safePark\/icon\/in_elevator.png"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [119.35982797828059, 26.03148419642276]
+			}
+		},
+		{
+			"type": "Feature",
+			"id": 1,
+			"properties": {
+				"Id": 0,
+				"name": "电梯",
+				"category": "25136",
+				"poitype": "elevator",
+				"display": "18,19,20,21,22,",
+				"icon": "\/image\/safePark\/icon\/in_elevator.png"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [119.36002168962951, 26.03156136056846]
+			}
+		},
+		{
+			"type": "Feature",
+			"id": 2,
+			"properties": {
+				"Id": 0,
+				"name": "楼梯",
+				"category": "25134",
+				"poitype": "stairs",
+				"display": "19,20,21,22,",
+				"icon": "\/image\/safePark\/icon\/in_stair.png"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [119.35998740216799, 26.03139020771302]
+			}
+		},
+		{
+			"type": "Feature",
+			"id": 3,
+			"properties": {
+				"Id": 0,
+				"name": "楼梯",
+				"category": "25134",
+				"poitype": "stairs",
+				"display": "18,19,20,21,22,",
+				"icon": "\/image\/safePark\/icon\/in_stair.png"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [119.35981619994864, 26.031210915326234]
+			}
+		},
+		{
+			"type": "Feature",
+			"id": 4,
+			"properties": {
+				"Id": 0,
+				"name": "女卫生间",
+				"category": "25133",
+				"poitype": null,
+				"display": "19,20,21,22,",
+				"icon": "\/image\/safePark\/icon\/in_womanwc.png"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [119.35993469710674, 26.031162731240869]
+			}
+		},
+		{
+			"type": "Feature",
+			"id": 5,
+			"properties": {
+				"Id": 0,
+				"name": "男卫生间",
+				"category": "25075",
+				"poitype": null,
+				"display": "21,22,",
+				"icon": "\/image\/safePark\/icon\/in_manwc.png"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [119.35991030763144, 26.031128229056286]
+			}
+		},
+		{
+			"type": "Feature",
+			"id": 6,
+			"properties": {
+				"Id": 0,
+				"name": "楼梯",
+				"category": "25134",
+				"poitype": "stairs",
+				"display": "16,17,18,19,20,21,22,",
+				"icon": "\/image\/safePark\/icon\/in_stair.png"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [119.36048185416503, 26.031259932222966]
+			}
+		},
+		{
+			"type": "Feature",
+			"id": 7,
+			"properties": {
+				"Id": 0,
+				"name": "女卫生间",
+				"category": "25133",
+				"poitype": null,
+				"display": "19,20,21,22,",
+				"icon": "\/image\/safePark\/icon\/in_womanwc.png"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [119.36041915536752, 26.031116093805156]
+			}
+		},
+		{
+			"type": "Feature",
+			"id": 8,
+			"properties": {
+				"Id": 0,
+				"name": "楼梯",
+				"category": "25134",
+				"poitype": "stairs",
+				"display": "17,18,19,20,21,22,",
+				"icon": "\/image\/safePark\/icon\/in_stair.png"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [119.36007853552452, 26.030765281937541]
+			}
+		},
+		{
+			"type": "Feature",
+			"id": 9,
+			"properties": {
+				"Id": 0,
+				"name": "电梯",
+				"category": "25136",
+				"poitype": "elevator",
+				"display": "20,21,22,",
+				"icon": "\/image\/safePark\/icon\/in_elevator.png"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [119.36012517296022, 26.030755288201313]
+			}
+		},
+		{
+			"type": "Feature",
+			"id": 10,
+			"properties": {
+				"Id": 0,
+				"name": "电梯",
+				"category": "25136",
+				"poitype": "elevator",
+				"display": "17,18,19,20,21,22,",
+				"icon": "\/image\/safePark\/icon\/in_elevator.png"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [119.36087426694255, 26.030743549527024]
+			}
+		},
+		{
+			"type": "Feature",
+			"id": 11,
+			"properties": {
+				"Id": 0,
+				"name": "男卫生间",
+				"category": "25075",
+				"poitype": null,
+				"display": "19,20,21,22,",
+				"icon": "\/image\/safePark\/icon\/in_manwc.png"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [119.36073578231201, 26.030670024181944]
+			}
+		},
+		{
+			"type": "Feature",
+			"id": 12,
+			"properties": {
+				"Id": 0,
+				"name": "女卫生间",
+				"category": "25133",
+				"poitype": null,
+				"display": "21,22,",
+				"icon": "\/image\/safePark\/icon\/in_womanwc.png"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [119.36077861261012, 26.030640042973271]
+			}
+		},
+		{
+			"type": "Feature",
+			"id": 13,
+			"properties": {
+				"Id": 0,
+				"name": "楼梯",
+				"category": "25134",
+				"poitype": "stairs",
+				"display": "20,21,22,",
+				"icon": "\/image\/safePark\/icon\/in_stair.png"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [119.36083643351257, 26.030685014786279]
+			}
+		},
+		{
+			"type": "Feature",
+			"id": 14,
+			"properties": {
+				"Id": 0,
+				"name": "电梯",
+				"category": "25136",
+				"poitype": "elevator",
+				"display": "15,16,17,18,19,20,21,22,",
+				"icon": "\/image\/safePark\/icon\/in_elevator.png"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [119.36119517691687, 26.030254332344231]
+			}
+		},
+		{
+			"type": "Feature",
+			"id": 15,
+			"properties": {
+				"Id": 0,
+				"name": "楼梯",
+				"category": "25134",
+				"poitype": "stairs",
+				"display": "19,20,21,22,",
+				"icon": "\/image\/safePark\/icon\/in_stair.png"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [119.36106352947509, 26.030089354562065]
+			}
+		},
+		{
+			"type": "Feature",
+			"id": 16,
+			"properties": {
+				"Id": 0,
+				"name": "停车场入口",
+				"category": "15012002",
+				"poitype": null,
+				"display": "17,18,19,20,21,22,",
+				"icon": "\/image\/safePark\/icon\/in_other_poi.png"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [119.36152452043581, 26.030721820615003]
+			}
+		},
+		{
+			"type": "Feature",
+			"id": 17,
+			"properties": {
+				"Id": 0,
+				"name": "停车场出口",
+				"category": "15012002",
+				"poitype": null,
+				"display": "17,18,19,20,21,22,",
+				"icon": "\/image\/safePark\/icon\/in_other_poi.png"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [119.36049464065965, 26.031691511087267]
+			}
+		},
+		{
+			"type": "Feature",
+			"id": 18,
+			"properties": {
+				"Id": 0,
+				"name": "电梯",
+				"category": "25136",
+				"poitype": "elevator",
+				"display": "20,21,22,",
+				"icon": "\/image\/safePark\/icon\/in_elevator.png"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [119.359769134063, 26.0312920061256]
+			}
+		},
+		{
+			"type": "Feature",
+			"id": 19,
+			"properties": {
+				"Id": 0,
+				"name": "男卫生间",
+				"category": "25075",
+				"poitype": null,
+				"display": "20,21,22,",
+				"icon": "\/image\/safePark\/icon\/in_manwc.png"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [119.35988912589971, 26.031298605869299]
+			}
+		},
+		{
+			"type": "Feature",
+			"id": 20,
+			"properties": {
+				"Id": 0,
+				"name": "电梯",
+				"category": "25136",
+				"poitype": "elevator",
+				"display": "21,22,",
+				"icon": "\/image\/safePark\/icon\/in_elevator.png"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [119.35992369383933, 26.031325271675183]
+			}
+		},
+		{
+			"type": "Feature",
+			"id": 21,
+			"properties": {
+				"Id": 0,
+				"name": "女卫生间",
+				"category": "25133",
+				"poitype": null,
+				"display": "21,22,",
+				"icon": "\/image\/safePark\/icon\/in_womanwc.png"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [119.35994028431135, 26.031254823786792]
+			}
+		},
+		{
+			"type": "Feature",
+			"id": 22,
+			"properties": {
+				"Id": 0,
+				"name": "停车场",
+				"category": "15012002",
+				"poitype": null,
+				"display": "19,20,21,22,",
+				"icon": "\/image\/safePark\/icon\/in_other_poi.png"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [119.36019250717797, 26.030951918400753]
+			}
+		},
+		{
+			"type": "Feature",
+			"id": 23,
+			"properties": {
+				"Id": 0,
+				"name": "停车场",
+				"category": "15012002",
+				"poitype": null,
+				"display": "18,19,20,21,22,",
+				"icon": "\/image\/safePark\/icon\/in_other_poi.png"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [119.35989193366366, 26.030624266620251]
+			}
+		},
+		{
+			"type": "Feature",
+			"id": 24,
+			"properties": {
+				"Id": 0,
+				"name": "停车场",
+				"category": "15012002",
+				"poitype": null,
+				"display": "16,17,18,19,20,21,22,",
+				"icon": "\/image\/safePark\/icon\/in_other_poi.png"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [119.3604564607873, 26.030186445795184]
+			}
+		},
+		{
+			"type": "Feature",
+			"id": 25,
+			"properties": {
+				"Id": 0,
+				"name": "停车场",
+				"category": "15012002",
+				"poitype": null,
+				"display": "18,19,20,21,22,",
+				"icon": "\/image\/safePark\/icon\/in_other_poi.png"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [119.36076614763722, 26.030376802675637]
+			}
+		},
+		{
+			"type": "Feature",
+			"id": 26,
+			"properties": {
+				"Id": 0,
+				"name": "楼梯",
+				"category": "25134",
+				"poitype": "stairs",
+				"display": "19,20,21,22,",
+				"icon": "\/image\/safePark\/icon\/in_stair.png"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [119.36051202120183, 26.030376802675637]
+			}
+		},
+		{
+			"type": "Feature",
+			"id": 27,
+			"properties": {
+				"Id": 0,
+				"name": "楼梯",
+				"category": "25134",
+				"poitype": "stairs",
+				"display": "18,21,22,",
+				"icon": "\/image\/safePark\/icon\/in_stair.png"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [119.36049814698548, 26.03040691181668]
+			}
+		},
+		{
+			"type": "Feature",
+			"id": 28,
+			"properties": {
+				"Id": 0,
+				"name": "楼梯",
+				"category": "25134",
+				"poitype": "stairs",
+				"display": "21,22,",
+				"icon": "\/image\/safePark\/icon\/in_stair.png"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [119.36089739474053, 26.03071444819237]
+			}
+		},
+		{
+			"type": "Feature",
+			"id": 29,
+			"properties": {
+				"Id": 0,
+				"name": "楼梯",
+				"category": "25134",
+				"poitype": "stairs",
+				"display": "18,19,20,21,22,",
+				"icon": "\/image\/safePark\/icon\/in_stair.png"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [119.36102231644335, 26.030815099392921]
+			}
+		}
+	]
+}
